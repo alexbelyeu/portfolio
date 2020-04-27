@@ -631,17 +631,6 @@ video {
   background-color: #f7fafc;
 }
 
-div.tooltip {
-  position: absolute;
-  text-align: center;
-  padding: 2px;
-  font: 12px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
-}
-
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -14979,6 +14968,23 @@ div.tooltip {
 
 .delay-1000 {
   transition-delay: 1000ms;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  font: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.curved {
+  height: 40vh;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
 }
 
 @media (min-width: 640px) {

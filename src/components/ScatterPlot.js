@@ -146,7 +146,7 @@ class ScatterPlot extends Component {
       .range([this.h - this.padding, this.margin.bottom])
 
     return <svg ref={el => (this.svg = el)}>
-      <g id="netflix_logo">
+      <g id="netflix_logo_scatter_plot">
         <image href={logo} x={this.w - 40} y="0" height="100px" width="150px"/>
         <text x={this.w - 100} y={120} fill="black" fontSize="14">
           The scatter plot to the left illustrates a

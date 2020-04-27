@@ -8,6 +8,8 @@
   @apply bg-gray-100;
 }
 
+@tailwind utilities;
+
 div.tooltip {	
   position: absolute;	
   text-align: center;	
@@ -19,4 +21,8 @@ div.tooltip {
   pointer-events: none;	
 }
 
-@tailwind utilities;
+.curved {
+  height: 40vh;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}

@@ -1,26 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import netflixData from '../data/netflix_shows.json';
-import Layout from "../components/layout"
-// import Image from "../components/image"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import ScatterPlot from "../components/ScatterPlot";
-import Histogram from "../components/Histogram";
 import "../../tailwind.generated.css"
 
 const IndexPage = () => {  
-  const filteredData = netflixData.filter(d => !isNaN(d.userRatingScore))
   return (
     <Layout>
-      <SEO title="Home" />
-      <div className="my-4 card" key={0}>
-        <ScatterPlot id={0} width={950} dataset={filteredData} />
+      <SEO title="Alex Belyeu" />
+      <div className="flex items-center justify-center mt-16 mb-32 mx-56">
+        <p className="text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
       </div>
-      <div className="card" key={1}>
-        <Histogram id={1} width={950} dataset={filteredData} />
+      <div className="flex items-center justify-center bg-red-500 h-56 w-screen">
+        <div className="border-solid border-4 border-gray-600 h-64 w-1/2"></div>
       </div>
-      <Link to="/page-2/">Go to page 2</Link>
+
     </Layout>
   )
 }

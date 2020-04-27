@@ -4,6 +4,7 @@ import oceanBeachTheme from 'typography-theme-ocean-beach'
 oceanBeachTheme.overrideThemeStyles = () => ({
   a: {
     textShadow: "none",
+    backgroundImage: "none"
   },
 });
 
