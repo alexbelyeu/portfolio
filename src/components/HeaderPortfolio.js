@@ -7,7 +7,7 @@ import SpeechBubble from "./SpeechBubble"
 import NavBar from "./NavBar"
 import NavItem from "./NavItem"
 
-const Header = ({ siteTitle }) => (
+const HeaderPortfolio = ({ siteTitle }) => (
   <div>
     <NavBar>
       <Link
@@ -44,12 +44,12 @@ const Header = ({ siteTitle }) => (
   </div>
 )
 
-Header.propTypes = {
+HeaderPortfolio.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+HeaderPortfolio.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default HeaderPortfolio

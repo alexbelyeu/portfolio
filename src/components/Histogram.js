@@ -110,7 +110,6 @@ class Histogram extends Component {
 
   render() {
     const { dataset } = this.props;
-    console.log('CONSOLE.LOG: Histogram -> render -> dataset', dataset);
 
     const ratingMin = d3.min(dataset, d => +d.userRatingScore)
     const ratingMax = d3.max(dataset, d => +d.userRatingScore)
