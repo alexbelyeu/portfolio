@@ -12,13 +12,7 @@ const filteredData = netflixData.filter(d => !isNaN(d.userRatingScore))
 const Projects = () => (
   <LayoutPortfolio>
     <SEO title="Projects" />
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0 1.0875rem 1.45rem`,
-      }}
-    >
+    <div>
       <h1>Here go the projects</h1>
       <div className="my-4 card" key={0}>
         <ScatterPlot id={0} width={950} dataset={filteredData} />
