@@ -19,11 +19,11 @@ const HeaderPortfolio = ({ siteTitle }) => (
       <NavItem to="/projects">Projects</NavItem>
       <NavItem to="/contact">Contact</NavItem>
     </NavBar>
-    <header className="flex w-screen items-center justify-center bg-red-500 curved">
+    <header className="flex items-center justify-center bg-red-500 curved h-96 lg:h-64">
       <HeaderImage />
-      <div className="relative h-48 w-40">
-        <SpeechBubble className="absolute h-32 w-40 -mt-8" />
-        <div className="absolute ml-3 h-32 w-40 ml-10">
+      <div className="h-64 w-40">
+        <SpeechBubble className="absolute h-32 w-40" />
+        <div className="absolute h-32 ml-10 mt-8">
           <h1 className="text-lg text-white">Hi!</h1>
           <h2 className="pt-1 text-sm text-white font-hairline">
             I'm Alex Belyeu
