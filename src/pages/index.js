@@ -20,8 +20,17 @@ const IndexPage = () => {
             culpa qui officia deserunt mollit anim id est laborum."
           </p>
         </div>
-        <div className="flex items-center justify-center bg-red-500 h-56">
-          <div className="border-solid border-4 border-gray-600 h-64 w-1/2"></div>
+        <div className="flex items-center justify-center bg-red-500 h-64">
+          <div className="grid grid-rows-3 h-96 w-1/2 rounded-lg shadow-lg bg-gray-100">
+            <div class="grid grid-cols-2 col-span-2 rounded-t-lg">
+              <div className="grid justify-center items-center rounded-t-lg border-solid border-2 border-gray-300">Skills</div>
+              <div className="grid justify-center items-center rounded-t-lg border-solid border-2 border-gray-300">Projects</div>
+            </div>
+            <div class="rounded-lg row-span-2 col-span-2"></div>
+            {/* <div className="row-span-2"></div> */}
+          </div>
+        </div>
+        <div className="flex items-center justify-center h-56">
         </div>
       </div>
     </LayoutPortfolio>
