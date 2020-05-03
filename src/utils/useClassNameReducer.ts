@@ -2,26 +2,31 @@ import { useReducer } from "react"
 import { skillsToProjectsMap, projectToSkillsMap } from "./skillsToProjectsMap"
 
 type ClassNameType = {
-  activeClassName: string,
+  activeClassName: string
   classesToActivate: string[]
 }
 type ActionType = {
-  type: string,
+  type: string
   id: string
 }
 const useClassNameReducer = (): [ClassNameType, ActionType | any] => {
-  const initialState: ClassNameType = { activeClassName: "", classesToActivate: [] }
+  const initialState: ClassNameType = {
+    activeClassName: "",
+    classesToActivate: [],
+  }
   const reducer = (state: ClassNameType, action: ActionType): ClassNameType => {
     switch (action.type) {
       case "addClass": {
         const isSkill = Object.keys(skillsToProjectsMap).includes(action.id)
-        const color = isSkill ? "teal" : "red"
+        const activeClassName = isSkill
+          ? "text-teal-500"
+          : "transition-all ease-out duration-500 transform scale-150 opacity-100"
         const classesToActivate = isSkill
           ? skillsToProjectsMap[action.id]
           : projectToSkillsMap[action.id]
 
         return {
-          activeClassName: `text-${color}-500`,
+          activeClassName,
           classesToActivate,
         }
       }

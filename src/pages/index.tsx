@@ -1,6 +1,8 @@
 import React from "react"
+import Img from "gatsby-image"
 
 import LayoutPortfolio from "../components/LayoutPortfolio"
+import threeLogo from '../images/three_logo.png';
 import SEO from "../components/seo"
 import "../../tailwind.generated.css"
 import {
@@ -20,9 +22,16 @@ import {
   NETFLIX,
 } from "../utils/constants"
 import useClassNameReducer from "../utils/useClassNameReducer"
+import HtmlSvg from "../components/HtmlSvg"
+import CssSvg from "../components/CssSvg"
+import JsSvg from "../components/JsSvg"
+import ReactSvg from "../components/ReactSvg"
+import ReactNativeSvg from "../components/ReactNativeSvg"
+import D3Svg from "../components/D3Svg"
 
 const IndexPage = () => {
   const [state, dispatch] = useClassNameReducer()
+  console.log('CONSOLE.LOG: IndexPage -> state', state.classesToActivate);
   const focusRelevant = (e: React.MouseEvent): void => {
     dispatch({ type: "addClass", id: e.currentTarget.id })
   }
@@ -66,78 +75,78 @@ const IndexPage = () => {
                   id={HTML}
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(HTML) &&
                     state.activeClassName
                   }`}
                 >
-                  {HTML}
+                  <HtmlSvg />
                 </p>
                 <p
                   id={CSS}
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(CSS) &&
                     state.activeClassName
                   }`}
                 >
-                  {CSS}
+                  <CssSvg />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={JS}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(JS) &&
                     state.activeClassName
                   }`}
                 >
-                  {JS}
+                  <JsSvg />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={REACT}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(REACT) &&
                     state.activeClassName
                   }`}
                 >
-                  {REACT}
+                  <ReactSvg />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={REACTNATIVE}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-150 hover:opacity-100 ${
                     state.classesToActivate.includes(REACTNATIVE) &&
                     state.activeClassName
                   }`}
                 >
-                  {REACTNATIVE}
+                  <ReactNativeSvg />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={D3}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-150 hover:opacity-100 ${
                     state.classesToActivate.includes(D3) &&
                     state.activeClassName
                   }`}
                 >
-                  {D3}
+                  <D3Svg />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={THREE}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-150 hover:opacity-100 ${
                     state.classesToActivate.includes(THREE) &&
                     state.activeClassName
                   }`}
                 >
-                  {THREE}
+                  <img alt="three.js logo" src={threeLogo} width={90} />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
