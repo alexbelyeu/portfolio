@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import logo from '../images/Netflix_Logo_RGB.png';
-// import '../tailwind.generated.css';
 
 class ScatterPlot extends Component {
   constructor(props) {

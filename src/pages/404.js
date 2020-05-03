@@ -2,6 +2,7 @@ import React from "react"
 
 import LayoutPortfolio from "../components/LayoutPortfolio"
 import SEO from "../components/seo"
+import "../../tailwind.generated.css"
 
 const NotFoundPage = () => (
   <LayoutPortfolio>

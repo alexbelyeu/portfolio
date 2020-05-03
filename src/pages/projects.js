@@ -7,6 +7,7 @@ import ScatterPlot from "../components/ScatterPlot"
 import Histogram from "../components/Histogram"
 import LayoutPortfolio from "../components/LayoutPortfolio"
 import SEO from "../components/seo"
+import "../../tailwind.generated.css"
 
 const filteredData = netflixData.filter(d => !isNaN(d.userRatingScore))
 const Projects = () => (

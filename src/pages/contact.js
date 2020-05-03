@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
+
 import LayoutPortfolio from "../components/LayoutPortfolio"
 import SEO from "../components/seo"
+import "../../tailwind.generated.css"
 
 const Contact = () => (
   <LayoutPortfolio>
