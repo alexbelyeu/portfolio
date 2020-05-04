@@ -25,6 +25,7 @@ import useClassNameReducer from "../utils/useClassNameReducer"
 import HtmlSvg from "../components/HtmlSvg"
 import CssSvg from "../components/CssSvg"
 import JsSvg from "../components/JsSvg"
+import GatsbySvg from "../components/GatsbySvg"
 import ReactSvg from "../components/ReactSvg"
 import ReactNativeSvg from "../components/ReactNativeSvg"
 import D3Svg from "../components/D3Svg"
@@ -56,15 +57,15 @@ const IndexPage = () => {
           </p>
         </div>
         <div className="flex items-center justify-center bg-red-500 h-64">
-          <div className="grid grid-rows-4 h-96 rounded-lg shadow-lg bg-gray-100 w-screen mx-10 sm:mx-20 md:mx-32 lg:mx-56">
+          <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-10 sm:mx-20 md:mx-32 lg:mx-56">
             <div className="grid grid-cols-2 col-span-2 rounded-t-lg">
               <div className="grid justify-center items-center rounded-tl-lg">
-                <div className="py-3 px-10 border-b-2">
+                <div className="py-3 w-24 text-center border-b-2">
                   <p className="text-xl font-semibold">Skills</p>
                 </div>
               </div>
               <div className="grid justify-center items-center rounded-tr-lg">
-                <div className="py-3 px-10 border-b-2">
+                <div className="py-3 w-24 text-center border-b-2">
                   <p className="text-xl font-semibold">Projects</p>
                 </div>
               </div>
@@ -75,7 +76,7 @@ const IndexPage = () => {
                   id={HTML}
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(HTML) &&
                     state.activeClassName
                   }`}
@@ -86,7 +87,7 @@ const IndexPage = () => {
                   id={CSS}
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(CSS) &&
                     state.activeClassName
                   }`}
@@ -97,7 +98,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={JS}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(JS) &&
                     state.activeClassName
                   }`}
@@ -108,7 +109,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={REACT}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(REACT) &&
                     state.activeClassName
                   }`}
@@ -119,7 +120,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={REACTNATIVE}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-150 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(REACTNATIVE) &&
                     state.activeClassName
                   }`}
@@ -130,7 +131,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={D3}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-150 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(D3) &&
                     state.activeClassName
                   }`}
@@ -141,23 +142,23 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={THREE}
-                  className={`opacity-50 transition-all ease-out duration-500 transform hover:scale-150 hover:opacity-100 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(THREE) &&
                     state.activeClassName
                   }`}
                 >
-                  <img alt="three.js logo" src={threeLogo} width={90} />
+                  <img alt="three.js logo" src={threeLogo} width={100} />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={GATSBY}
-                  className={`text-red-300 hover:text-red-500 ${
+                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
                     state.classesToActivate.includes(GATSBY) &&
                     state.activeClassName
                   }`}
                 >
-                  {GATSBY}
+                  <GatsbySvg />
                 </p>
               </div>
               <div className="flex flex-col justify-around items-center">

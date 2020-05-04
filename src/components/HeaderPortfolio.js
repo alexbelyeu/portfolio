@@ -5,7 +5,7 @@ import React from "react"
 import HeaderImage from "./HeaderImage"
 import SpeechBubble from "./SpeechBubble"
 import NavBar from "./NavBar"
-import NavItem from "./NavItem"
+import { ProjectsNavItem, ContactNavItem } from "./NavItem"
 
 const HeaderPortfolio = ({ siteTitle }) => (
   <div>
@@ -16,8 +16,8 @@ const HeaderPortfolio = ({ siteTitle }) => (
       >
         AGB
       </Link>
-      <NavItem to="/projects">Projects</NavItem>
-      <NavItem to="/contact">Contact</NavItem>
+      <ProjectsNavItem to="/projects">Projects</ProjectsNavItem>
+      <ContactNavItem to="/contact">Contact</ContactNavItem>
     </NavBar>
     <header className="flex items-center justify-center bg-red-500 curved h-96 lg:h-64">
       <HeaderImage />
