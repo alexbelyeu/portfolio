@@ -10,6 +10,7 @@ const CssSvg = ({ className }) => {
       version="1.1"
     >
       <defs id="defs3478" />
+      <title>CSS</title>
       <g id="layer1" transform="translate(-193.633,-276.3622)">
         <g id="g3013" transform="translate(119,276.3622)">
           <polygon

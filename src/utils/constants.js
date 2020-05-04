@@ -12,7 +12,7 @@ export const PORTFOLIO = "This Portfolio!";
 export const SHOOTERCOASTER = "ShooterCoaster 3D";
 export const SOMRYST = "Somryst";
 export const SWEETSPOT = "Sweetspot";
-export const TAPJOY = "Tapjoy Interplay Framework";
+export const TAPJOY = "Tapjoy Ad Framework";
 
 export const SKILLS = [HTML, CSS, JS, REACT, REACTNATIVE, D3, THREE, GATSBY];
 export const PROJECTS = [NETFLIX, PORTFOLIO, SHOOTERCOASTER, SOMRYST, SWEETSPOT, TAPJOY];

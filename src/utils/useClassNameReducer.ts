@@ -19,8 +19,8 @@ const useClassNameReducer = (): [ClassNameType, ActionType | any] => {
       case "addClass": {
         const isSkill = Object.keys(skillsToProjectsMap).includes(action.id)
         const activeClassName = isSkill
-          ? "text-teal-500"
-          : "transition-all ease-out duration-500 transform scale-125 opacity-100"
+          ? "scale-125 opacity-100 text-teal-500"
+          : "scale-125 opacity-100"
         const classesToActivate = isSkill
           ? skillsToProjectsMap[action.id]
           : projectToSkillsMap[action.id]

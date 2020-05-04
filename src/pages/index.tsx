@@ -1,10 +1,8 @@
 import React from "react"
-import Img from "gatsby-image"
 
 import LayoutPortfolio from "../components/LayoutPortfolio"
-import threeLogo from '../images/three_logo.png';
 import SEO from "../components/seo"
-import "../../tailwind.generated.css"
+import threeLogo from "../images/three_logo.png"
 import {
   HTML,
   CSS,
@@ -29,10 +27,11 @@ import GatsbySvg from "../components/GatsbySvg"
 import ReactSvg from "../components/ReactSvg"
 import ReactNativeSvg from "../components/ReactNativeSvg"
 import D3Svg from "../components/D3Svg"
+import "../../tailwind.generated.css"
 
 const IndexPage = () => {
   const [state, dispatch] = useClassNameReducer()
-  console.log('CONSOLE.LOG: IndexPage -> state', state.classesToActivate);
+  console.log("CONSOLE.LOG: IndexPage -> state", state.classesToActivate)
   const focusRelevant = (e: React.MouseEvent): void => {
     dispatch({ type: "addClass", id: e.currentTarget.id })
   }
@@ -45,7 +44,7 @@ const IndexPage = () => {
     <LayoutPortfolio>
       <SEO title="Alex Belyeu" />
       <div>
-        <div className="flex items-center justify-center mt-16 mb-32 mx-10 sm:mx-20 md:mx-32">
+        <div className="flex items-center justify-center mt-16 mb-48 mx-10 sm:mx-20 md:mx-32">
           <p className="text-lg">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -57,7 +56,7 @@ const IndexPage = () => {
           </p>
         </div>
         <div className="flex items-center justify-center bg-red-500 h-64">
-          <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-10 sm:mx-20 md:mx-32 lg:mx-56">
+          <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-48">
             <div className="grid grid-cols-2 col-span-2 rounded-t-lg">
               <div className="grid justify-center items-center rounded-tl-lg">
                 <div className="py-3 w-24 text-center border-b-2">
@@ -147,7 +146,12 @@ const IndexPage = () => {
                     state.activeClassName
                   }`}
                 >
-                  <img alt="three.js logo" src={threeLogo} width={100} />
+                  <img
+                    alt="three.js"
+                    title="Three.js"
+                    src={threeLogo}
+                    width={100}
+                  />
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
@@ -166,7 +170,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={NETFLIX}
-                  className={`text-teal-300 hover:text-teal-500 ${
+                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500  ${
                     state.classesToActivate.includes(NETFLIX) &&
                     state.activeClassName
                   }`}
@@ -177,7 +181,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={SHOOTERCOASTER}
-                  className={`text-teal-300 hover:text-teal-500 ${
+                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
                     state.classesToActivate.includes(SHOOTERCOASTER) &&
                     state.activeClassName
                   }`}
@@ -188,7 +192,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={TAPJOY}
-                  className={`text-teal-300 hover:text-teal-500 text-center ${
+                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 text-center ${
                     state.classesToActivate.includes(TAPJOY) &&
                     state.activeClassName
                   }`}
@@ -199,21 +203,18 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={SOMRYST}
-                  className={`text-teal-300 hover:text-teal-500 ${
+                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
                     state.classesToActivate.includes(SOMRYST) &&
                     state.activeClassName
                   }`}
                 >
                   {SOMRYST}
-                  <span role="img" aria-label="TM">
-                    ™️
-                  </span>
                 </p>
                 <p
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={PORTFOLIO}
-                  className={`text-teal-300 hover:text-teal-500 ${
+                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
                     state.classesToActivate.includes(PORTFOLIO) &&
                     state.activeClassName
                   }`}
@@ -224,7 +225,7 @@ const IndexPage = () => {
                   onMouseEnter={focusRelevant}
                   onMouseLeave={unfocusRelevant}
                   id={SWEETSPOT}
-                  className={`text-teal-300 hover:text-teal-500 ${
+                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
                     state.classesToActivate.includes(SWEETSPOT) &&
                     state.activeClassName
                   }`}

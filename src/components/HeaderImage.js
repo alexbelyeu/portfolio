@@ -26,7 +26,7 @@ const HeaderImage = () => {
     }
   `)
 
-  return <Img className="rounded-full" fixed={data.placeholderImage.childImageSharp.fixed} />
+  return <Img className="rounded-full shadow-xl" fixed={data.placeholderImage.childImageSharp.fixed} />
 }
 
 export default HeaderImage

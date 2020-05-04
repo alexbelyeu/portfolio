@@ -12,6 +12,7 @@ const ReactNativeSvg = ({ className }) => {
       enable-background="new 0 0 600 600"
     >
       <defs id="defs4498" />
+      <title>React Native</title>
       <rect
         width="140"
         height="30"
@@ -25,7 +26,7 @@ const ReactNativeSvg = ({ className }) => {
         cx="143.83101"
         cy="123.22496"
         id="circle4488"
-        fill="#05a5cd"
+        fill="#05a5d1"
         fillOpacity="1"
         r="22.305986"
       />
@@ -59,43 +60,15 @@ const ReactNativeSvg = ({ className }) => {
       <text
         fontStyle="normal"
         fontVariant="normal"
-        fontWeight="normal"
-        fontStretch="normal"
-        fontSize="188.67041016px"
-        //  lineHeight="125%"
-        fontFamily="sans-serif"
-        //  textAlign="start"
-        letterSpacing="0px"
-        wordSpacing="0px"
-        writingMode="lr-tb"
-        textAnchor="start"
-        fill="#000000"
-        fillOpacity="1"
         stroke="none"
-        strokeWidth="1px"
-        strokeLinecap="butt"
-        strokeLinejoin="miter"
-        strokeOpacity="1"
-        x="317.21265"
-        y="186.71268"
         id="text5042"
       >
         <tspan
           x="317.21265"
           y="186.71268"
           id="tspan5046"
-          fontStyle="normal"
-          fontVariant="normal"
-          fontWeight="normal"
-          fontStretch="normal"
           fontSize="188.67706299px"
-          lineHeight="125%"
-          fontFamily="'Helvetica Neue'"
-          textAlign="start"
-          writingMode="lr-tb"
-          textAnchor="start"
           fill="#05a5d1"
-          fillOpacity="1"
         >
           React Native
         </tspan>
