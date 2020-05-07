@@ -1,4 +1,9 @@
 @tailwind base;
+
+img {
+  margin-bottom: 0rem;
+}
+
 @tailwind components;
 
 .card {

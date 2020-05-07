@@ -1,5 +1,6 @@
 import { useReducer } from "react"
-import { skillsToProjectsMap, projectToSkillsMap } from "./skillsToProjectsMap"
+import { projectToSkillsMap } from "."
+import { skillsToProjectsMap } from "./constants"
 
 type ClassNameType = {
   activeClassName: string

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import HeaderImage from "./HeaderImage"
-import SpeechBubble from "./SpeechBubble"
+import SpeechBubbleSvg from "./svgs/SpeechBubbleSvg"
 import NavBar from "./NavBar"
 import { ProjectsNavItem, ContactNavItem } from "./NavItem"
 
@@ -22,7 +22,7 @@ const HeaderPortfolio = ({ siteTitle }) => (
     <header className="flex items-center justify-center bg-red-500 curved h-96 lg:h-64">
       <HeaderImage />
       <div className="h-64 w-40">
-        <SpeechBubble className="absolute h-32 w-40" />
+        <SpeechBubbleSvg className="absolute h-32 w-40" />
         <div className="absolute h-32 ml-10 mt-8">
           <h1 className="text-lg text-white">Hi!</h1>
           <h2 className="pt-1 text-sm text-white font-hairline">

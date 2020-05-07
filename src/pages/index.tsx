@@ -18,16 +18,12 @@ import {
   TAPJOY,
   SWEETSPOT,
   NETFLIX,
+  SKILLS,
 } from "../utils/constants"
 import useClassNameReducer from "../utils/useClassNameReducer"
-import HtmlSvg from "../components/HtmlSvg"
-import CssSvg from "../components/CssSvg"
-import JsSvg from "../components/JsSvg"
-import GatsbySvg from "../components/GatsbySvg"
-import ReactSvg from "../components/ReactSvg"
-import ReactNativeSvg from "../components/ReactNativeSvg"
-import D3Svg from "../components/D3Svg"
 import "../../tailwind.generated.css"
+import SkillItem from "../components/SkillItem"
+import { skillsToItemsArray, projectsToItemsArray } from "../utils"
 
 const IndexPage = () => {
   const [state, dispatch] = useClassNameReducer()
@@ -56,7 +52,7 @@ const IndexPage = () => {
           </p>
         </div>
         <div className="flex items-center justify-center bg-red-500 h-64">
-          <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-48">
+          <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-10">
             <div className="grid grid-cols-2 col-span-2 rounded-t-lg">
               <div className="grid justify-center items-center rounded-tl-lg">
                 <div className="py-3 w-24 text-center border-b-2">
@@ -70,168 +66,37 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 col-span-2 row-span-4 rounded-b-lg">
-              <div className="flex flex-col justify-around items-center">
-                <p
-                  id={HTML}
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(HTML) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <HtmlSvg />
-                </p>
-                <p
-                  id={CSS}
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(CSS) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <CssSvg />
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={JS}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(JS) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <JsSvg />
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={REACT}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(REACT) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <ReactSvg />
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={REACTNATIVE}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(REACTNATIVE) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <ReactNativeSvg />
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={D3}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(D3) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <D3Svg />
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={THREE}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(THREE) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <img
-                    alt="three.js"
-                    title="Three.js"
-                    src={threeLogo}
-                    width={100}
+              <div
+                className="grid row-span-3"
+                style={{ placeItems: "center" }}
+              >
+                {skillsToItemsArray.map(skillTuple => (
+                  <SkillItem
+                    id={skillTuple[0]}
+                    initialClass="opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100"
+                    item={skillTuple[1]}
+                    onMouseEnter={focusRelevant}
+                    onMouseLeave={unfocusRelevant}
+                    classesToActivate={state.classesToActivate}
+                    activeClassName={state.activeClassName}
                   />
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={GATSBY}
-                  className={`opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 ${
-                    state.classesToActivate.includes(GATSBY) &&
-                    state.activeClassName
-                  }`}
-                >
-                  <GatsbySvg />
-                </p>
+                ))}
               </div>
-              <div className="flex flex-col justify-around items-center">
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={NETFLIX}
-                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500  ${
-                    state.classesToActivate.includes(NETFLIX) &&
-                    state.activeClassName
-                  }`}
-                >
-                  {NETFLIX}
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={SHOOTERCOASTER}
-                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
-                    state.classesToActivate.includes(SHOOTERCOASTER) &&
-                    state.activeClassName
-                  }`}
-                >
-                  {SHOOTERCOASTER}
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={TAPJOY}
-                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 text-center ${
-                    state.classesToActivate.includes(TAPJOY) &&
-                    state.activeClassName
-                  }`}
-                >
-                  {TAPJOY}
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={SOMRYST}
-                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
-                    state.classesToActivate.includes(SOMRYST) &&
-                    state.activeClassName
-                  }`}
-                >
-                  {SOMRYST}
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={PORTFOLIO}
-                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
-                    state.classesToActivate.includes(PORTFOLIO) &&
-                    state.activeClassName
-                  }`}
-                >
-                  {PORTFOLIO}
-                </p>
-                <p
-                  onMouseEnter={focusRelevant}
-                  onMouseLeave={unfocusRelevant}
-                  id={SWEETSPOT}
-                  className={`text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500 ${
-                    state.classesToActivate.includes(SWEETSPOT) &&
-                    state.activeClassName
-                  }`}
-                >
-                  {SWEETSPOT}
-                </p>
+              <div
+                className="grid grid-cols-2 col-span-1 row-span-3"
+                style={{ placeItems: "center" }}
+              >
+                {projectsToItemsArray.map(projectTuple => (
+                  <SkillItem
+                    id={projectTuple[0]}
+                    item={projectTuple[1]}
+                    initialClass="text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500"
+                    onMouseEnter={focusRelevant}
+                    onMouseLeave={unfocusRelevant}
+                    classesToActivate={state.classesToActivate}
+                    activeClassName={state.activeClassName}
+                  />
+                ))}
               </div>
             </div>
           </div>
