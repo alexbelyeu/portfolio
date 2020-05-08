@@ -13,7 +13,7 @@ const SkillItem = ({
     id={id}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className={`${initialClass} ${
+    className={`w-full h-full flex justify-center items-center ${initialClass} ${
       classesToActivate.includes(id) && activeClassName
     }`}
   >

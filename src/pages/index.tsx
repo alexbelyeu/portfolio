@@ -53,21 +53,21 @@ const IndexPage = () => {
         </div>
         <div className="flex items-center justify-center bg-red-500 h-64">
           <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-10">
-            <div className="grid grid-cols-2 col-span-2 rounded-t-lg">
-              <div className="grid justify-center items-center rounded-tl-lg">
+            <div className="grid grid-cols-3 col-span-3 rounded-t-lg">
+              <div className="grid col-span-1 justify-center items-center rounded-tl-lg">
                 <div className="py-3 w-24 text-center border-b-2">
                   <p className="text-xl font-semibold">Skills</p>
                 </div>
               </div>
-              <div className="grid justify-center items-center rounded-tr-lg">
+              <div className="grid col-span-2 justify-center items-center rounded-tr-lg">
                 <div className="py-3 w-24 text-center border-b-2">
                   <p className="text-xl font-semibold">Projects</p>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 col-span-2 row-span-4 rounded-b-lg">
+            <div className="grid grid-cols-3 col-span-3 row-span-4 rounded-b-lg">
               <div
-                className="grid row-span-3"
+                className="grid row-span-3 col-span-1"
                 style={{ placeItems: "center" }}
               >
                 {skillsToItemsArray.map(skillTuple => (
@@ -83,7 +83,7 @@ const IndexPage = () => {
                 ))}
               </div>
               <div
-                className="grid grid-cols-2 col-span-1 row-span-3"
+                className="grid grid-cols-2 col-span-2 row-span-3"
                 style={{ placeItems: "center" }}
               >
                 {projectsToItemsArray.map(projectTuple => (
