@@ -19,7 +19,7 @@ const HeaderPortfolio = ({ siteTitle }) => (
       <ProjectsNavItem to="/projects">Projects</ProjectsNavItem>
       <ContactNavItem to="/contact">Contact</ContactNavItem>
     </NavBar>
-    <header className="flex items-center justify-center bg-red-500 curved h-96 lg:h-64">
+    <header className="curved flex items-center justify-center bg-red-500 h-96 lg:h-64">
       <HeaderImage />
       <div className="h-64 w-40">
         <SpeechBubbleSvg className="absolute h-32 w-40" />

@@ -26,6 +26,7 @@ import D3Svg from "../components/svgs/D3Svg"
 import GatsbySvg from "../components/svgs/GatsbySvg"
 import threeLogo from "../images/three_logo.png"
 import netflixGif from "../images/netflix_gif.gif"
+import ProjectGif from "../components/ProjectGif"
 
 const getKeyByValue = (object, value) => {
   return Object.keys(object).filter(key => object[key].includes(value))
@@ -55,46 +56,14 @@ export const skillsToItemsArray = [
   [GATSBY, <GatsbySvg />],
 ]
 
-export const projectsToItemsArray = [
-  [
-    PORTFOLIO,
-    <div className="w-10/12 h-20 flex justify-center items-center border">
-      PORTFOLIO
-    </div>,
-  ],
-  [
-    NETFLIX,
-    <div className="w-10/12 h-24 flex justify-center items-center shadow">
-      <img
-        className="object-fill h-24 w-full"
-        alt="netflix"
-        title="netflix"
-        src={netflixGif}
-      />
-    </div>,
-  ],
+export const projectsToGifsArray = [
+  [PORTFOLIO, <ProjectGif project={PORTFOLIO} className="portfolio-swap" />],
+  [NETFLIX, <ProjectGif project={NETFLIX} className="netflix-swap" />],
   [
     SHOOTERCOASTER,
-    <div className="w-10/12 h-20 flex justify-center items-center border">
-      SHOOTERCOASTER
-    </div>,
+    <ProjectGif project={SHOOTERCOASTER} className="shootercoaster-swap" />,
   ],
-  [
-    SOMRYST,
-    <div className="w-10/12 h-20 flex justify-center items-center border">
-      SOMRYST
-    </div>,
-  ],
-  [
-    SWEETSPOT,
-    <div className="w-10/12 h-20 flex justify-center items-center border">
-      SWEETSPOT
-    </div>,
-  ],
-  [
-    TAPJOY,
-    <div className="w-10/12 h-20 flex justify-center items-center border">
-      TAPJOY
-    </div>,
-  ],
+  [SOMRYST, <ProjectGif project={SOMRYST} className="somryst-swap" />],
+  [SWEETSPOT, <ProjectGif project={SWEETSPOT} className="sweetspot-swap" />],
+  [TAPJOY, <ProjectGif project={TAPJOY} className="tapjoy-swap" />],
 ]

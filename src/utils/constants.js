@@ -9,7 +9,7 @@ export const GATSBY = "Gatsby";
 
 export const NETFLIX = "Netflix Study";
 export const PORTFOLIO = "This Portfolio!";
-export const SHOOTERCOASTER = "ShooterCoaster 3D";
+export const SHOOTERCOASTER = "Shooter Coaster 3D";
 export const SOMRYST = "Somryst";
 export const SWEETSPOT = "Sweetspot";
 export const TAPJOY = "Tapjoy Ad Framework";

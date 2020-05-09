@@ -6,16 +6,7 @@ img {
 
 @tailwind components;
 
-.card {
-  @apply shadow-xl;
-}
-.card:hover {
-  @apply bg-gray-100;
-}
-
-@tailwind utilities;
-
-div.tooltip {	
+.tooltip {	
   position: absolute;	
   text-align: center;	
   padding: 2px;
@@ -30,3 +21,69 @@ div.tooltip {
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
 }
+
+.gif-swap {
+  @apply absolute;
+  @apply h-24 bg-center bg-cover;
+  z-index: 0;
+  opacity: 0.1;
+}
+.gif-swap:hover {
+  z-index: 11;
+  opacity: 1;
+}
+
+.netflix-swap {
+  background-image: url('src/images/netflix_static.png');
+}
+
+.netflix-swap:hover {
+  background-image: url('src/images/netflix_gif.gif');
+}
+
+.portfolio-swap {
+  background-image: url('src/images/portfolio_static.png');
+}
+
+.portfolio-swap:hover {
+  background-image: url('src/images/portfolio_gif.gif');
+}
+
+.shootercoaster-swap {
+  background-image: url('src/images/shootercoaster_static.png');
+}
+
+.shootercoaster-swap:hover {
+  background-image: url('src/images/shootercoaster_gif.gif');
+}
+
+.somryst-swap {
+  background-image: url('src/images/somryst_static.png');
+}
+
+.somryst-swap:hover {
+  background-image: url('src/images/somryst_gif.gif');
+}
+
+.sweetspot-swap {
+  background-image: url('src/images/sweetspot_static.png');
+}
+
+.sweetspot-swap:hover {
+  background-image: url('src/images/sweetspot_gif.gif');
+}
+
+.tapjoy-swap {
+  background-image: url('src/images/tapjoy_static.png');
+}
+
+.tapjoy-swap:hover {
+  background-image: url('src/images/tapjoy_gif.gif');
+}
+/* .grid-item-title {
+  @apply absolute;
+  @apply z-10;
+  @apply italic;
+} */
+
+@tailwind utilities;

@@ -2,28 +2,10 @@ import React from "react"
 
 import LayoutPortfolio from "../components/LayoutPortfolio"
 import SEO from "../components/seo"
-import threeLogo from "../images/three_logo.png"
-import {
-  HTML,
-  CSS,
-  JS,
-  REACT,
-  REACTNATIVE,
-  D3,
-  THREE,
-  GATSBY,
-  SHOOTERCOASTER,
-  SOMRYST,
-  PORTFOLIO,
-  TAPJOY,
-  SWEETSPOT,
-  NETFLIX,
-  SKILLS,
-} from "../utils/constants"
 import useClassNameReducer from "../utils/useClassNameReducer"
 import "../../tailwind.generated.css"
-import SkillItem from "../components/SkillItem"
-import { skillsToItemsArray, projectsToItemsArray } from "../utils"
+import GridItem from "../components/GridItem"
+import { skillsToItemsArray, projectsToGifsArray } from "../utils"
 
 const IndexPage = () => {
   const [state, dispatch] = useClassNameReducer()
@@ -55,13 +37,13 @@ const IndexPage = () => {
           <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-10">
             <div className="grid grid-cols-3 col-span-3 rounded-t-lg">
               <div className="grid col-span-1 justify-center items-center rounded-tl-lg">
-                <div className="py-3 w-24 text-center border-b-2">
-                  <p className="text-xl font-semibold">Skills</p>
+                <div className="py-3 w-24 text-center border-b-2 border-teal-500">
+                  <p className="text-xl text-teal-500 font-semibold">Skills</p>
                 </div>
               </div>
               <div className="grid col-span-2 justify-center items-center rounded-tr-lg">
-                <div className="py-3 w-24 text-center border-b-2">
-                  <p className="text-xl font-semibold">Projects</p>
+                <div className="py-3 w-24 text-center border-b-2 border-teal-500">
+                  <p className="text-xl text-teal-500 font-semibold">Projects</p>
                 </div>
               </div>
             </div>
@@ -71,14 +53,14 @@ const IndexPage = () => {
                 style={{ placeItems: "center" }}
               >
                 {skillsToItemsArray.map(skillTuple => (
-                  <SkillItem
-                    id={skillTuple[0]}
-                    initialClass="opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100"
-                    item={skillTuple[1]}
+                  <GridItem
                     onMouseEnter={focusRelevant}
                     onMouseLeave={unfocusRelevant}
                     classesToActivate={state.classesToActivate}
                     activeClassName={state.activeClassName}
+                    id={skillTuple[0]}
+                    item={skillTuple[1]}
+                    initialClass="opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100"
                   />
                 ))}
               </div>
@@ -86,15 +68,15 @@ const IndexPage = () => {
                 className="grid grid-cols-2 col-span-2 row-span-3"
                 style={{ placeItems: "center" }}
               >
-                {projectsToItemsArray.map(projectTuple => (
-                  <SkillItem
-                    id={projectTuple[0]}
-                    item={projectTuple[1]}
-                    initialClass="text-teal-300 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100 hover:text-teal-500"
+                {projectsToGifsArray.map(projectTuple => (
+                  <GridItem
                     onMouseEnter={focusRelevant}
                     onMouseLeave={unfocusRelevant}
                     classesToActivate={state.classesToActivate}
                     activeClassName={state.activeClassName}
+                    id={projectTuple[0]}
+                    item={projectTuple[1]}
+                    initialClass="transition-all ease-out duration-500 transform hover:scale-125 cursor-pointer"
                   />
                 ))}
               </div>
