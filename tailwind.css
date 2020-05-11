@@ -22,14 +22,13 @@ img {
   border-bottom-right-radius: 50% 20%;
 }
 
-.gif-swap {
-  @apply absolute;
-  @apply h-24 bg-center bg-cover;
-  z-index: 0;
+.project-gif-swap {
+  @apply absolute bg-center bg-cover w-full border border-2 border-teal-500 rounded;
   opacity: 0.1;
 }
-.gif-swap:hover {
-  z-index: 11;
+
+.project-gif-swap:hover,
+.project-gif-swap.hover {
   opacity: 1;
 }
 
@@ -37,7 +36,8 @@ img {
   background-image: url('src/images/netflix_static.png');
 }
 
-.netflix-swap:hover {
+.netflix-swap:hover,
+.netflix-swap.hover {
   background-image: url('src/images/netflix_gif.gif');
 }
 
@@ -45,7 +45,8 @@ img {
   background-image: url('src/images/portfolio_static.png');
 }
 
-.portfolio-swap:hover {
+.portfolio-swap:hover,
+.portfolio-swap.hover {
   background-image: url('src/images/portfolio_gif.gif');
 }
 
@@ -53,7 +54,8 @@ img {
   background-image: url('src/images/shootercoaster_static.png');
 }
 
-.shootercoaster-swap:hover {
+.shootercoaster-swap:hover,
+.shootercoaster-swap.hover {
   background-image: url('src/images/shootercoaster_gif.gif');
 }
 
@@ -61,7 +63,8 @@ img {
   background-image: url('src/images/somryst_static.png');
 }
 
-.somryst-swap:hover {
+.somryst-swap:hover,
+.somryst-swap.hover {
   background-image: url('src/images/somryst_gif.gif');
 }
 
@@ -69,7 +72,8 @@ img {
   background-image: url('src/images/sweetspot_static.png');
 }
 
-.sweetspot-swap:hover {
+.sweetspot-swap:hover,
+.sweetspot-swap.hover {
   background-image: url('src/images/sweetspot_gif.gif');
 }
 
@@ -77,13 +81,9 @@ img {
   background-image: url('src/images/tapjoy_static.png');
 }
 
-.tapjoy-swap:hover {
+.tapjoy-swap:hover,
+.tapjoy-swap.hover {
   background-image: url('src/images/tapjoy_gif.gif');
 }
-/* .grid-item-title {
-  @apply absolute;
-  @apply z-10;
-  @apply italic;
-} */
 
 @tailwind utilities;

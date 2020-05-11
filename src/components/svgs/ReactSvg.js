@@ -3,13 +3,8 @@ import React from "react"
 const ReactSvg = ({ className }) => {
   return (
     <svg
-      version="1.1"
-      id="Layer_1"
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
-      x="0"
-      y="0"
-      width={100}
-      height={40}
       viewBox="-144.1 342.6 230.3 97"
     >
       <title>React</title>

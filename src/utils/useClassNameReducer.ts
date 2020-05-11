@@ -1,10 +1,16 @@
 import { useReducer } from "react"
 import { projectToSkillsMap } from "."
-import { skillsToProjectsMap } from "./constants"
+import {
+  skillsToProjectsMap,
+  SKILLS,
+  PROJECTS,
+  SKILLSANDPROJECTS,
+} from "./constants"
 
 type ClassNameType = {
   activeClassName: string
-  classesToActivate: string[]
+  itemsToActivate: string[]
+  itemsToDeactivate: string[]
 }
 type ActionType = {
   type: string
@@ -13,22 +19,27 @@ type ActionType = {
 const useClassNameReducer = (): [ClassNameType, ActionType | any] => {
   const initialState: ClassNameType = {
     activeClassName: "",
-    classesToActivate: [],
+    itemsToActivate: [],
+    itemsToDeactivate: [],
   }
   const reducer = (state: ClassNameType, action: ActionType): ClassNameType => {
     switch (action.type) {
       case "addClass": {
         const isSkill = Object.keys(skillsToProjectsMap).includes(action.id)
         const activeClassName = isSkill
-          ? "scale-125 opacity-100 text-teal-500"
+          ? "md:scale-125"
           : "scale-125 opacity-100"
-        const classesToActivate = isSkill
-          ? skillsToProjectsMap[action.id]
-          : projectToSkillsMap[action.id]
+        const itemsToActivate = isSkill
+          ? [...skillsToProjectsMap[action.id], action.id]
+          : [...projectToSkillsMap[action.id], action.id]
+        const itemsToDeactivate = SKILLSANDPROJECTS.filter(
+          item => !itemsToActivate.includes(item)
+        )
 
         return {
           activeClassName,
-          classesToActivate,
+          itemsToActivate,
+          itemsToDeactivate,
         }
       }
       case "removeClass": {

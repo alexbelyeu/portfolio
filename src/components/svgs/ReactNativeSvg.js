@@ -3,10 +3,11 @@ import React from "react"
 const ReactNativeSvg = ({ className }) => {
   return (
     <svg
+      className={className}
       id="Layer_2"
       x="0px"
       y="0px"
-      width="160"
+      // width="160"
       height="30"
       viewBox="0 0 1392.8243 246.78077"
       enable-background="new 0 0 600 600"

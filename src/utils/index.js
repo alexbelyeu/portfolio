@@ -25,7 +25,6 @@ import ReactNativeSvg from "../components/svgs/ReactNativeSvg"
 import D3Svg from "../components/svgs/D3Svg"
 import GatsbySvg from "../components/svgs/GatsbySvg"
 import threeLogo from "../images/three_logo.png"
-import netflixGif from "../images/netflix_gif.gif"
 import ProjectGif from "../components/ProjectGif"
 
 const getKeyByValue = (object, value) => {
@@ -37,33 +36,33 @@ export const projectToSkillsMap = PROJECTS.reduce((acc, project) => {
 }, {})
 
 export const skillsToItemsArray = [
-  [HTML, <HtmlSvg />],
-  [CSS, <CssSvg />],
-  [JS, <JsSvg />],
-  [REACT, <ReactSvg />],
-  [REACTNATIVE, <ReactNativeSvg />],
-  [D3, <D3Svg />],
+  [HTML, () => <HtmlSvg />],
+  [CSS, () => <CssSvg />],
+  [JS, () => <JsSvg />],
+  [REACT, () => <ReactSvg className="w-20 md:w-24" />],
+  [REACTNATIVE, () => <ReactNativeSvg className="w-24 sm:w-32 md:w-40" />],
+  [D3, () => <D3Svg />],
   [
     THREE,
-    <img
+    () => <img
+      className="w-20 md:w-24"
       alt="three.js"
       title="Three.js"
       src={threeLogo}
-      width={100}
       height={40}
     />,
   ],
-  [GATSBY, <GatsbySvg />],
+  [GATSBY, () => <GatsbySvg />],
 ]
 
 export const projectsToGifsArray = [
-  [PORTFOLIO, <ProjectGif project={PORTFOLIO} className="portfolio-swap" />],
-  [NETFLIX, <ProjectGif project={NETFLIX} className="netflix-swap" />],
+  [PORTFOLIO, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={PORTFOLIO} className="portfolio-swap" />],
+  [NETFLIX, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={NETFLIX} className="netflix-swap" />],
   [
     SHOOTERCOASTER,
-    <ProjectGif project={SHOOTERCOASTER} className="shootercoaster-swap" />,
+    ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SHOOTERCOASTER} className="shootercoaster-swap" />,
   ],
-  [SOMRYST, <ProjectGif project={SOMRYST} className="somryst-swap" />],
-  [SWEETSPOT, <ProjectGif project={SWEETSPOT} className="sweetspot-swap" />],
-  [TAPJOY, <ProjectGif project={TAPJOY} className="tapjoy-swap" />],
+  [SOMRYST, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SOMRYST} className="somryst-swap" />],
+  [SWEETSPOT, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SWEETSPOT} className="sweetspot-swap" />],
+  [TAPJOY, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={TAPJOY} className="tapjoy-swap" />],
 ]

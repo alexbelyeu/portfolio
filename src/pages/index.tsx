@@ -9,7 +9,6 @@ import { skillsToItemsArray, projectsToGifsArray } from "../utils"
 
 const IndexPage = () => {
   const [state, dispatch] = useClassNameReducer()
-  console.log("CONSOLE.LOG: IndexPage -> state", state.classesToActivate)
   const focusRelevant = (e: React.MouseEvent): void => {
     dispatch({ type: "addClass", id: e.currentTarget.id })
   }
@@ -43,7 +42,9 @@ const IndexPage = () => {
               </div>
               <div className="grid col-span-2 justify-center items-center rounded-tr-lg">
                 <div className="py-3 w-24 text-center border-b-2 border-teal-500">
-                  <p className="text-xl text-teal-500 font-semibold">Projects</p>
+                  <p className="text-xl text-teal-500 font-semibold">
+                    Projects
+                  </p>
                 </div>
               </div>
             </div>
@@ -56,27 +57,30 @@ const IndexPage = () => {
                   <GridItem
                     onMouseEnter={focusRelevant}
                     onMouseLeave={unfocusRelevant}
-                    classesToActivate={state.classesToActivate}
                     activeClassName={state.activeClassName}
                     id={skillTuple[0]}
                     item={skillTuple[1]}
-                    initialClass="opacity-25 transition-all ease-out duration-500 transform hover:scale-125 hover:opacity-100"
+                    itemsToActivate={state.itemsToActivate}
+                    itemsToDeactivate={state.itemsToDeactivate}
+                    initialClass={`hover:scale-125 hover:opacity-100
+                      ${state.itemsToDeactivate.includes(skillTuple[0]) && "scale-50 opacity-25"}`}
                   />
                 ))}
               </div>
               <div
-                className="grid grid-cols-2 col-span-2 row-span-3"
+                className="grid col-span-2 row-span-3 grid-cols-1 md:grid-cols-2"
                 style={{ placeItems: "center" }}
               >
                 {projectsToGifsArray.map(projectTuple => (
                   <GridItem
                     onMouseEnter={focusRelevant}
                     onMouseLeave={unfocusRelevant}
-                    classesToActivate={state.classesToActivate}
                     activeClassName={state.activeClassName}
                     id={projectTuple[0]}
                     item={projectTuple[1]}
-                    initialClass="transition-all ease-out duration-500 transform hover:scale-125 cursor-pointer"
+                    itemsToActivate={state.itemsToActivate}
+                    itemsToDeactivate={state.itemsToDeactivate}
+                    initialClass={`md:hover:scale-125 ${state.itemsToDeactivate.includes(projectTuple[0]) && "scale-50"}`}
                   />
                 ))}
               </div>

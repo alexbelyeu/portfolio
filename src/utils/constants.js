@@ -16,6 +16,7 @@ export const TAPJOY = "Tapjoy Ad Framework";
 
 export const SKILLS = [HTML, CSS, JS, REACT, REACTNATIVE, D3, THREE, GATSBY];
 export const PROJECTS = [NETFLIX, PORTFOLIO, SHOOTERCOASTER, SOMRYST, SWEETSPOT, TAPJOY];
+export const SKILLSANDPROJECTS = [...SKILLS, ...PROJECTS];
 
 export const skillsToProjectsMap = {
   [HTML]: [NETFLIX, SHOOTERCOASTER, TAPJOY, PORTFOLIO],

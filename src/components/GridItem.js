@@ -1,23 +1,27 @@
 import React from "react"
 
 const GridItem = ({
-  activeClassName,
-  classesToActivate,
-  id,
-  initialClass,
-  item,
   onMouseEnter,
   onMouseLeave,
+  itemsToActivate,
+  itemsToDeactivate,
+  activeClassName,
+  id,
+  item,
+  initialClass,
 }) => (
   <div
     id={id}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className={`h-full w-4/5 lg:w-3/5 flex justify-center items-center ${initialClass} ${
-      classesToActivate.includes(id) && activeClassName
-    }`}
+    className={`transition-all ease-out duration-500 transform
+      h-full w-4/5 md:w-3/5 flex justify-center items-center
+      ${initialClass}
+      ${itemsToActivate.includes(id) && activeClassName}`}
   >
-    {item}
+    {item({
+      isActive: itemsToActivate.includes(id),
+    })}
   </div>
 )
 
