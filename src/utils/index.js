@@ -56,13 +56,13 @@ export const skillsToItemsArray = [
 ]
 
 export const projectsToGifsArray = [
-  [PORTFOLIO, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={PORTFOLIO} className="portfolio-swap" />],
-  [NETFLIX, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={NETFLIX} className="netflix-swap" />],
+  [PORTFOLIO, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={PORTFOLIO} projectClassName="portfolio-swap" />],
+  [NETFLIX, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={NETFLIX} projectClassName="netflix-swap" />],
   [
     SHOOTERCOASTER,
-    ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SHOOTERCOASTER} className="shootercoaster-swap" />,
+    ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SHOOTERCOASTER} projectClassName="shootercoaster-swap" />,
   ],
-  [SOMRYST, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SOMRYST} className="somryst-swap" />],
-  [SWEETSPOT, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SWEETSPOT} className="sweetspot-swap" />],
-  [TAPJOY, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={TAPJOY} className="tapjoy-swap" />],
+  [SOMRYST, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SOMRYST} projectClassName="somryst-swap" />],
+  [SWEETSPOT, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={SWEETSPOT} projectClassName="sweetspot-swap" />],
+  [TAPJOY, ({ isActive }) => <ProjectGif isActive={isActive} projectDesc={TAPJOY} projectClassName="tapjoy-swap" />],
 ]

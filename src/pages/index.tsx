@@ -53,34 +53,35 @@ const IndexPage = () => {
                 className="grid row-span-3 col-span-1"
                 style={{ placeItems: "center" }}
               >
-                {skillsToItemsArray.map(skillTuple => (
+                {skillsToItemsArray.map((skillTuple, index) => (
                   <GridItem
                     onMouseEnter={focusRelevant}
                     onMouseLeave={unfocusRelevant}
                     activeClassName={state.activeClassName}
+                    inactiveClassName={state.inactiveClassName}
                     id={skillTuple[0]}
+                    key={`${index}${skillTuple[0]}`}
                     item={skillTuple[1]}
                     itemsToActivate={state.itemsToActivate}
                     itemsToDeactivate={state.itemsToDeactivate}
-                    initialClass={`hover:scale-125 hover:opacity-100
-                      ${state.itemsToDeactivate.includes(skillTuple[0]) && "scale-50 opacity-25"}`}
                   />
                 ))}
               </div>
               <div
-                className="grid col-span-2 row-span-3 grid-cols-1 md:grid-cols-2"
+                className="grid row-span-3 col-span-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 style={{ placeItems: "center" }}
               >
-                {projectsToGifsArray.map(projectTuple => (
+                {projectsToGifsArray.map((projectTuple, index) => (
                   <GridItem
                     onMouseEnter={focusRelevant}
                     onMouseLeave={unfocusRelevant}
                     activeClassName={state.activeClassName}
+                    inactiveClassName={state.inactiveClassName}
                     id={projectTuple[0]}
+                    key={`${index}${projectTuple[0]}`}
                     item={projectTuple[1]}
                     itemsToActivate={state.itemsToActivate}
                     itemsToDeactivate={state.itemsToDeactivate}
-                    initialClass={`md:hover:scale-125 ${state.itemsToDeactivate.includes(projectTuple[0]) && "scale-50"}`}
                   />
                 ))}
               </div>

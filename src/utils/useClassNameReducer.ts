@@ -9,6 +9,7 @@ import {
 
 type ClassNameType = {
   activeClassName: string
+  inactiveClassName: string
   itemsToActivate: string[]
   itemsToDeactivate: string[]
 }
@@ -19,6 +20,7 @@ type ActionType = {
 const useClassNameReducer = (): [ClassNameType, ActionType | any] => {
   const initialState: ClassNameType = {
     activeClassName: "",
+    inactiveClassName: "",
     itemsToActivate: [],
     itemsToDeactivate: [],
   }
@@ -26,9 +28,8 @@ const useClassNameReducer = (): [ClassNameType, ActionType | any] => {
     switch (action.type) {
       case "addClass": {
         const isSkill = Object.keys(skillsToProjectsMap).includes(action.id)
-        const activeClassName = isSkill
-          ? "md:scale-125"
-          : "scale-125 opacity-100"
+        const activeClassName = "scale-110"
+        const inactiveClassName = "scale-50 opacity-25"
         const itemsToActivate = isSkill
           ? [...skillsToProjectsMap[action.id], action.id]
           : [...projectToSkillsMap[action.id], action.id]
@@ -38,6 +39,7 @@ const useClassNameReducer = (): [ClassNameType, ActionType | any] => {
 
         return {
           activeClassName,
+          inactiveClassName,
           itemsToActivate,
           itemsToDeactivate,
         }

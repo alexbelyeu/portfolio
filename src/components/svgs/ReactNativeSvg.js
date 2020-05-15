@@ -10,7 +10,7 @@ const ReactNativeSvg = ({ className }) => {
       // width="160"
       height="30"
       viewBox="0 0 1392.8243 246.78077"
-      enable-background="new 0 0 600 600"
+      enableBackground="new 0 0 600 600"
     >
       <defs id="defs4498" />
       <title>React Native</title>

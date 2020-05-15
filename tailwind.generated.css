@@ -643,7 +643,7 @@ img {
   border-bottom-right-radius: 50% 20%;
 }
 
-.project-gif-swap {
+.project-gif-gif {
   position: absolute;
   background-position: center;
   background-size: cover;
@@ -655,17 +655,27 @@ img {
   opacity: 0.1;
 }
 
-.project-gif-swap:hover,
-.project-gif-swap.hover {
+/* Select the element which has a class of `project-gif-gif` and also a class of `active`. */
+
+.project-gif-gif.active {
   opacity: 1;
+}
+
+.project-gif-title {
+}
+
+.project-gif-title.active {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .netflix-swap {
   background-image: url('src/images/netflix_static.png');
 }
 
-.netflix-swap:hover,
-.netflix-swap.hover {
+.netflix-swap.active {
   background-image: url('src/images/netflix_gif.gif');
 }
 
@@ -673,8 +683,7 @@ img {
   background-image: url('src/images/portfolio_static.png');
 }
 
-.portfolio-swap:hover,
-.portfolio-swap.hover {
+.portfolio-swap.active {
   background-image: url('src/images/portfolio_gif.gif');
 }
 
@@ -682,8 +691,7 @@ img {
   background-image: url('src/images/shootercoaster_static.png');
 }
 
-.shootercoaster-swap:hover,
-.shootercoaster-swap.hover {
+.shootercoaster-swap.active {
   background-image: url('src/images/shootercoaster_gif.gif');
 }
 
@@ -691,8 +699,7 @@ img {
   background-image: url('src/images/somryst_static.png');
 }
 
-.somryst-swap:hover,
-.somryst-swap.hover {
+.somryst-swap.active {
   background-image: url('src/images/somryst_gif.gif');
 }
 
@@ -700,8 +707,7 @@ img {
   background-image: url('src/images/sweetspot_static.png');
 }
 
-.sweetspot-swap:hover,
-.sweetspot-swap.hover {
+.sweetspot-swap.active {
   background-image: url('src/images/sweetspot_gif.gif');
 }
 
@@ -709,8 +715,7 @@ img {
   background-image: url('src/images/tapjoy_static.png');
 }
 
-.tapjoy-swap:hover,
-.tapjoy-swap.hover {
+.tapjoy-swap.active {
   background-image: url('src/images/tapjoy_gif.gif');
 }
 
