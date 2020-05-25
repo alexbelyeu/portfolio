@@ -7,14 +7,14 @@ const PearLogo = () => {
     query {
       mobile: file(relativePath: { eq: "pear_logo.jpg" }) {
         childImageSharp {
-          fixed(width: 125) {
+          fixed(width: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       desktop: file(relativePath: { eq: "pear_logo.jpg" }) {
         childImageSharp {
-          fixed(width: 250) {
+          fixed(width: 200) {
             ...GatsbyImageSharpFixed
           }
         }

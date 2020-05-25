@@ -7,14 +7,14 @@ const TapjoyLogo = () => {
     query {
       mobile: file(relativePath: { eq: "tapjoy_logo.png" }) {
         childImageSharp {
-          fixed(width: 125) {
+          fixed(width: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       desktop: file(relativePath: { eq: "tapjoy_logo.png" }) {
         childImageSharp {
-          fixed(width: 250) {
+          fixed(width: 200) {
             ...GatsbyImageSharpFixed
           }
         }

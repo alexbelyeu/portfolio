@@ -7,14 +7,14 @@ const SweetspotLogo = () => {
     query {
       mobile: file(relativePath: { eq: "sweetspot_logo.png" }) {
         childImageSharp {
-          fixed(width: 125) {
+          fixed(width: 103, height: 15) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       desktop: file(relativePath: { eq: "sweetspot_logo.png" }) {
         childImageSharp {
-          fixed(width: 250, height: 36) {
+          fixed(width: 200) {
             ...GatsbyImageSharpFixed
           }
         }
