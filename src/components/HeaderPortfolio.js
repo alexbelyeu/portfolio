@@ -19,14 +19,14 @@ const HeaderPortfolio = () => (
       <ContactNavItem to="/contact">Contact</ContactNavItem>
     </NavBar>
     <header className="curved flex items-center justify-center bg-indigo-500 h-64 lg:h-56">
-      <img src={alexGif} alt="alex gif" className="w-48 md:w-64 mt-32 lg:mt-24 z-10" />
-      <div className="h-64 w-40 -ml-16 z-10 mt-32 lg:mt-20">
+      <img src={alexGif} alt="alex gif" className="w-48 -ml-20 md:ml-0 mt-32 lg:mt-24 z-10" />
+      <div className="h-64 w-32 -ml-16 md:-ml-16 z-10 mt-32 lg:mt-20">
         <SpeechBubbleSvg className="absolute h-32 w-48" />
         <div className="absolute h-32 ml-12 mt-8">
-          <h1 className="text-lg text-white">Hi!</h1>
-          <h2 className="pt-1 text-md text-white font-hairline">
+          <h1 className="text-sm text-white">Hi!</h1>
+          <h1 className="pt-1 text-sm text-white">
             I'm Alex Belyeu
-          </h2>
+          </h1>
         </div>
       </div>
     </header>
