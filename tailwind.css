@@ -23,7 +23,7 @@ img {
 }
 
 .project-gif-gif {
-  @apply absolute bg-center bg-cover w-full border border-2 border-teal-500 rounded;
+  @apply absolute bg-center bg-cover w-full border border-2 border-green-500 rounded;
   opacity: 0.1;
 }
 

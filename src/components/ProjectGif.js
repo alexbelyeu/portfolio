@@ -13,7 +13,7 @@ const ProjectGif = ({ isActive, projectClassName, projectDesc }) => {
       />
       <div
         id="projectGifTitle"
-        className={`relative text-teal-500 text-center project-gif-title ${projectGifActive}`}
+        className={`relative text-green-500 text-center project-gif-title ${projectGifActive}`}
       >
         {projectDesc}
       </div>

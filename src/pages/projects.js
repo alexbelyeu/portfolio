@@ -1,18 +1,20 @@
-import React from "react"
 import { Link } from "gatsby"
-
-import netflixData from "../data/netflix_shows.json"
-
-import ScatterPlot from "../components/ScatterPlot"
+import React from "react"
+import "../../tailwind.generated.css"
 import Histogram from "../components/Histogram"
 import LayoutPortfolio from "../components/LayoutPortfolio"
+import ProjectsGrid from "../components/ProjectsGrid"
+import ScatterPlot from "../components/ScatterPlot"
 import SEO from "../components/seo"
-import "../../tailwind.generated.css"
+import netflixData from "../data/netflix_shows.json"
 
 const filteredData = netflixData.filter(d => !isNaN(d.userRatingScore))
 const Projects = () => (
   <LayoutPortfolio>
     <SEO title="Projects" />
+    <div className="my-48">
+      <ProjectsGrid />
+    </div>
     <div>
       <h1>Here go the projects</h1>
       <div className="my-4 shadow-xl hover:bg-gray-100" key={0}>
