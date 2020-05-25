@@ -1,14 +1,14 @@
 import Typography from 'typography'
-import oceanBeachTheme from 'typography-theme-ocean-beach'
+import lincolnTheme from 'typography-theme-lincoln'
 
-oceanBeachTheme.overrideThemeStyles = () => ({
+lincolnTheme.overrideThemeStyles = () => ({
   a: {
     textShadow: "none",
     backgroundImage: "none"
   },
 });
 
-const typography = new Typography(oceanBeachTheme)
+const typography = new Typography(lincolnTheme)
 
 
 export default typography;

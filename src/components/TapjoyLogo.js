@@ -30,7 +30,7 @@ const TapjoyLogo = () => {
     },
   ]
 
-  return <Img fixed={sources} />
+  return <Img alt="Tapjoy logo" fixed={sources} />
 }
 
 export default TapjoyLogo

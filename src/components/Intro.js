@@ -4,16 +4,20 @@ const Intro = () => {
   return (
     <div
       id="intro"
-      className="flex items-center justify-center mt-16 mb-48 mx-10 sm:mx-20 md:mx-32"
+      className="flex flex-col items-center justify-center mt-16 mb-48 mx-10 sm:mx-20 md:mx-32"
     >
       <p className="text-lg">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
+        <span className="text-xl font-bold">Welcome! </span>I'm Alex Belyeu, a Software Engineer based in Cambridge (MA),
+        and raised in Madrid, Spain 🇪🇸. Over the last 4 years, here are some of my proudest accomplishments: 
+      </p>
+      <ul className="pt-3 text-lg">
+      <li>🍺 I <span className="font-bold">co-founded a startup</span> that found the best real-time deals from bars around you.</li>
+        <li>🎮 I developed the frontend of an ad framework that was <span className="font-bold">used by millions</span> of gamers monthly.</li>
+        <li>🏅 I was the <span className="font-bold">first engineering hire</span> of the Pear Boston office.</li>
+      </ul>
+      <p className="pt-1 text-lg">
+        At Pear <span role="img" aria-label="pear">🍐</span>, I am currently the <span className="text-xl font-bold">Tech Lead for Somryst</span> —
+        the first digital therapeutic for Insomnia approved by the FDA for commercialization.
       </p>
     </div>
   )

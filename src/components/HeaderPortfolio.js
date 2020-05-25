@@ -22,10 +22,10 @@ const HeaderPortfolio = () => (
       <img src={alexGif} alt="alex gif" className="w-48 -ml-20 md:ml-0 mt-32 lg:mt-24 z-10" />
       <div className="h-64 w-32 -ml-16 md:-ml-16 z-10 mt-32 lg:mt-20">
         <SpeechBubbleSvg className="absolute h-32 w-48" />
-        <div className="absolute h-32 ml-12 mt-8">
-          <h1 className="text-sm text-white">Hi!</h1>
-          <h1 className="pt-1 text-sm text-white">
-            I'm Alex Belyeu
+        <div className="absolute h-32 ml-16 mt-8">
+          <h1 className="text-xl text-white">Hi!</h1>
+          <h1 className="pt-1 text-lg text-white">
+            I'm Alex.
           </h1>
         </div>
       </div>

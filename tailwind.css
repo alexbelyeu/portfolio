@@ -88,4 +88,11 @@ img {
   background-image: url('src/images/tapjoy_gif.gif');
 }
 
+.realmadrid {
+  background: url('src/images/realmadrid.png');
+  /* height: 30px; */
+  width: 30px;
+  display: block;
+}
+
 @tailwind utilities;

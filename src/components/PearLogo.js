@@ -30,7 +30,7 @@ const PearLogo = () => {
     },
   ]
 
-  return <Img fixed={sources} />
+  return <Img alt="Pear logo" fixed={sources} />
 }
 
 export default PearLogo

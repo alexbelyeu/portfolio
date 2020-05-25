@@ -30,7 +30,7 @@ const SweetspotLogo = () => {
     },
   ]
 
-  return <Img fixed={sources} />
+  return <Img alt="Sweetspot logo" fixed={sources} />
 }
 
 export default SweetspotLogo

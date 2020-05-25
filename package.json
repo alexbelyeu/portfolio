@@ -30,7 +30,7 @@
     "react-helmet": "^6.0.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-ocean-beach": "^0.16.19"
+    "typography-theme-lincoln": "^0.16.19"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "2.x",
