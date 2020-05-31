@@ -7,15 +7,15 @@ const TapjoyLogo = () => {
     query {
       mobile: file(relativePath: { eq: "tapjoy_logo.png" }) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       desktop: file(relativePath: { eq: "tapjoy_logo.png" }) {
         childImageSharp {
-          fixed(width: 200) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 200, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -23,14 +23,14 @@ const TapjoyLogo = () => {
   `)
 
   const sources = [
-    data.mobile.childImageSharp.fixed,
+    data.mobile.childImageSharp.fluid,
     {
-      ...data.desktop.childImageSharp.fixed,
+      ...data.desktop.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ]
 
-  return <Img alt="Tapjoy logo" fixed={sources} />
+  return <Img alt="Tapjoy logo" fluid={sources} />
 }
 
 export default TapjoyLogo

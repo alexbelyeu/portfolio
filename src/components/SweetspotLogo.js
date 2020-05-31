@@ -7,15 +7,15 @@ const SweetspotLogo = () => {
     query {
       mobile: file(relativePath: { eq: "sweetspot_logo.png" }) {
         childImageSharp {
-          fixed(width: 103, height: 15) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 110, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       desktop: file(relativePath: { eq: "sweetspot_logo.png" }) {
         childImageSharp {
-          fixed(width: 200) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 205, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -23,14 +23,14 @@ const SweetspotLogo = () => {
   `)
 
   const sources = [
-    data.mobile.childImageSharp.fixed,
+    data.mobile.childImageSharp.fluid,
     {
-      ...data.desktop.childImageSharp.fixed,
+      ...data.desktop.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ]
 
-  return <Img alt="Sweetspot logo" fixed={sources} />
+  return <Img alt="Sweetspot logo" fluid={sources} />
 }
 
 export default SweetspotLogo

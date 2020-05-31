@@ -14,17 +14,32 @@ const Companies = () => {
       </div>
       <div className="flex justify-around">
         <div className="flex self-center">
-          <a href="https://peartherapeutics.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            className="w-24 md:w-40"
+            href="https://peartherapeutics.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <PearLogo />
           </a>
         </div>
         <div className="flex self-center">
-          <a href="https://www.tapjoy.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            className="w-24 md:w-40"
+            href="https://www.tapjoy.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <TapjoyLogo />
           </a>
         </div>
         <div className="flex self-center">
-          <a href="https://www.youtube.com/watch?v=vsWjMGmsr8E" target="_blank" rel="noopener noreferrer">
+          <a
+            className="w-24 md:w-40"
+            href="https://www.youtube.com/watch?v=vsWjMGmsr8E"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <SweetspotLogo />
           </a>
         </div>

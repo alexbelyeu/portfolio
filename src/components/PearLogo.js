@@ -7,15 +7,15 @@ const PearLogo = () => {
     query {
       mobile: file(relativePath: { eq: "pear_logo.jpg" }) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       desktop: file(relativePath: { eq: "pear_logo.jpg" }) {
         childImageSharp {
-          fixed(width: 200) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 200, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -23,14 +23,14 @@ const PearLogo = () => {
   `)
 
   const sources = [
-    data.mobile.childImageSharp.fixed,
+    data.mobile.childImageSharp.fluid,
     {
-      ...data.desktop.childImageSharp.fixed,
+      ...data.desktop.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ]
 
-  return <Img alt="Pear logo" fixed={sources} />
+  return <Img alt="Pear logo" fluid={sources} />
 }
 
 export default PearLogo
