@@ -9,7 +9,7 @@ const Companies = () => {
       id="companies"
       className="flex flex-col items-stretch justify-center h-96"
     >
-      <div className="mt-40 mb-12 text-center font-bold text-indigo-900 text-xl lg:text-2xl">
+      <div className="mt-32 mb-12 text-center font-bold text-indigo-900 text-xl lg:text-2xl">
         Some awesome companies I've worked with
       </div>
       <div className="flex justify-around">
