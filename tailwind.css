@@ -1,10 +1,22 @@
 @tailwind base;
 
+:root {
+  --viewable: 0;
+}
+
+body {
+  @apply bg-indigo-100;
+}
 img {
   margin-bottom: 0rem;
 }
 
 @tailwind components;
+
+.slide {
+  @apply transition-all ease-out duration-500 transform;
+  --transform-translate-x: calc(var(--viewable)*-100%);
+}
 
 .tooltip {	
   position: absolute;	

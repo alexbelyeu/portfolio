@@ -13,12 +13,12 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const HeaderImage = () => {
+const RosieImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "alex_b4.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "rosie.jpeg" }) {
         childImageSharp {
-          fixed(width: 200) {
+          fixed(width: 150) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -26,7 +26,7 @@ const HeaderImage = () => {
     }
   `)
 
-  return <Img className="rounded-full shadow-xl z-10" fixed={data.placeholderImage.childImageSharp.fixed} />
+  return <Img className="rounded-full shadow-xl" fixed={data.placeholderImage.childImageSharp.fixed} />
 }
 
-export default HeaderImage
+export default RosieImage

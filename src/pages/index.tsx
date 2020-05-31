@@ -5,6 +5,7 @@ import Intro from "../components/Intro"
 import LayoutPortfolio from "../components/LayoutPortfolio"
 import ProjectsGrid from "../components/ProjectsGrid"
 import SEO from "../components/seo"
+import Testimonials from "../components/Testimonials"
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Intro />
       <ProjectsGrid />
       <Companies />
+      <Testimonials />
     </LayoutPortfolio>
   )
 }
