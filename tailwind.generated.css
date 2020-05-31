@@ -636,6 +636,9 @@ img {
 }
 
 .slide {
+  cursor: -webkit-grab;
+  cursor: grab;
+  pointer-events: none;
   transition-property: all;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -647,7 +650,43 @@ img {
   --transform-scale-x: 1;
   --transform-scale-y: 1;
   transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
-  --transform-translate-x: calc(var(--viewable)*-100%);
+  --transform-translate-x: calc(var(--viewable) * -100%);
+}
+
+.dot {
+  width: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.dot::before,
+.dot::after {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #48bb78;
+  width: 6rem;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 0px;
+  height: 3px;
+  margin: 3px 0 0;
+  opacity: 0;
+}
+
+.dot::before {
+  left:50%;
+}
+
+.dot::after {
+  right: 50%;
+}
+
+.fancy-underline::before,
+.fancy-underline::after {
+  opacity: 1;
+  width: 40%;
 }
 
 .tooltip {
@@ -695,51 +734,51 @@ img {
 }
 
 .netflix-swap {
-  background-image: url('src/images/netflix_static.png');
+  background-image: url("src/images/netflix_static.png");
 }
 
 .netflix-swap.active {
-  background-image: url('src/images/netflix_gif.gif');
+  background-image: url("src/images/netflix_gif.gif");
 }
 
 .portfolio-swap {
-  background-image: url('src/images/portfolio_static.png');
+  background-image: url("src/images/portfolio_static.png");
 }
 
 .portfolio-swap.active {
-  background-image: url('src/images/portfolio_gif.gif');
+  background-image: url("src/images/portfolio_gif.gif");
 }
 
 .shootercoaster-swap {
-  background-image: url('src/images/shootercoaster_static.png');
+  background-image: url("src/images/shootercoaster_static.png");
 }
 
 .shootercoaster-swap.active {
-  background-image: url('src/images/shootercoaster_gif.gif');
+  background-image: url("src/images/shootercoaster_gif.gif");
 }
 
 .somryst-swap {
-  background-image: url('src/images/somryst_static.png');
+  background-image: url("src/images/somryst_static.png");
 }
 
 .somryst-swap.active {
-  background-image: url('src/images/somryst_gif.gif');
+  background-image: url("src/images/somryst_gif.gif");
 }
 
 .sweetspot-swap {
-  background-image: url('src/images/sweetspot_static.png');
+  background-image: url("src/images/sweetspot_static.png");
 }
 
 .sweetspot-swap.active {
-  background-image: url('src/images/sweetspot_gif.gif');
+  background-image: url("src/images/sweetspot_gif.gif");
 }
 
 .tapjoy-swap {
-  background-image: url('src/images/tapjoy_static.png');
+  background-image: url("src/images/tapjoy_static.png");
 }
 
 .tapjoy-swap.active {
-  background-image: url('src/images/tapjoy_gif.gif');
+  background-image: url("src/images/tapjoy_gif.gif");
 }
 
 .space-y-0 > :not(template) ~ :not(template) {

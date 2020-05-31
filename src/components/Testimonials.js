@@ -5,24 +5,26 @@ import { Card } from "./Card"
 const Testimonials = () => {
   let x0
   const [viewable, setViewable] = useState(0)
-  useEffect(() => {
-    let root = document.documentElement
-    root.style.setProperty("--viewable", viewable)
-  }, [viewable])
 
   const swipe = (start, end) => {
-    if (Math.abs(start - end) > 100) {
-      // Swipe right to go left
+    // Considering 75 px enough to be a swipe
+    if (Math.abs(start - end) > 75) {
+      // Swipe right, to go left
       if (Math.sign(start - end) === -1) {
-        if (viewable === 0) return // Leftmost so nothing
+        if (viewable === 0) return // Leftmost so do nothing
         setViewable(viewable - 1)
       } else {
-        // Swipe left to go right
-        if (viewable === testimonials.length - 1) return // Rightmost so nothing
+        // Swipe left, to go right
+        if (viewable === testimonials.length - 1) return // Rightmost so do nothing
         setViewable(viewable + 1)
       }
     }
   }
+
+  useEffect(() => {
+    let root = document.documentElement
+    root.style.setProperty("--viewable", viewable)
+  }, [viewable])
 
   return (
     <div
@@ -52,13 +54,13 @@ const Testimonials = () => {
           />
         ))}
       </div>
-      <div id="Dots" className="flex flex-row mt-8">
+      <div id="Dots" className="flex flex-row my-8">
         {testimonials.map((testimonial, index) => (
           <div
             key={`${testimonial.person}Dot`}
             id={`${testimonial.person}Dot`}
-            className={`${index !== 0 && "ml-2"} ${
-              index === viewable && "font-bold text-indigo-900"
+            className={`dot ${
+              index === viewable && "font-bold text-indigo-900 fancy-underline"
             } ${index !== viewable && "cursor-pointer"}`}
             onClick={() => {
               setViewable(index)
