@@ -9,7 +9,7 @@ const SpeechBubble = ({ className }) => {
       // height="150"
       viewBox="0 0 85.704 64.542"
       id="Layer_1"
-      fill="white"
+      fill="#3c366b" // text-indigo-900
     >
       <defs id="defs8" />
       <g

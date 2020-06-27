@@ -10,7 +10,7 @@ const HeaderPortfolio = () => (
   <div>
     <NavBar>
       <Link
-        className="mr-auto mt-2 bg-transparent text-white font-black"
+        className="mr-auto mt-2 bg-transparent text-indigo-900 font-black"
         to="/"
       >
         AGB
@@ -18,13 +18,20 @@ const HeaderPortfolio = () => (
       <ProjectsNavItem to="/projects">Projects</ProjectsNavItem>
       <ContactNavItem to="/contact">Contact</ContactNavItem>
     </NavBar>
-    <header className="curved flex items-center justify-center bg-indigo-500 h-64 lg:h-56">
-      <img src={alexGif} alt="alex gif" className="w-48 -ml-20 md:ml-0 mt-32 lg:mt-24 z-10" />
+    <header
+      id="header"
+      className="curved flex items-center justify-center bg-indigo-100 h-64 lg:h-56"
+    >
+      <img
+        src={alexGif}
+        alt="alex gif"
+        className="w-48 -ml-20 md:ml-0 mt-32 lg:mt-24 z-10"
+      />
       <div className="h-64 w-32 -ml-16 md:-ml-16 z-10 mt-32 lg:mt-20">
         <SpeechBubbleSvg className="absolute h-32 w-48" />
         <div className="absolute h-32 ml-16 mt-8">
-          <h1 className="text-xl text-white">Hi!</h1>
-          <h1 className="pt-1 text-lg text-white">
+          <h1 className="text-xl font-extrabold text-indigo-900">Hi!</h1>
+          <h1 className="pt-1 text-lg font-extrabold text-indigo-900">
             I'm Alex.
           </h1>
         </div>

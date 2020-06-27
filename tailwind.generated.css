@@ -635,10 +635,9 @@ img {
   }
 }
 
-.slide {
-  cursor: -webkit-grab;
-  cursor: grab;
-  pointer-events: none;
+/** BUTTONS */
+
+.transition-el {
   transition-property: all;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -650,6 +649,95 @@ img {
   --transform-scale-x: 1;
   --transform-scale-y: 1;
   transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.nav-button {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  display: inline-block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #3c366b;
+  font-weight: 600;
+  border-width: 2px;
+  border-color: #434190;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.nav-button:active {
+  background-color: #a3bffa;
+  border-style: none;
+}
+
+.footer-button {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  justify-content: center;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 9999px;
+}
+
+.footer-button:active {
+  background-color: #a3bffa;
+  border-style: none;
+}
+
+/**/
+
+/** HeaderPortfolio */
+
+.curved {
+  position: relative;
+}
+
+.curved::after{
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  content: "";
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-image: url("src/images/madrid.jpg");
+  background-position: center;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
+}
+
+/**/
+
+/** Testimonials */
+
+.slide {
+  cursor: -webkit-grab;
+  cursor: grab;
+  pointer-events: none;
   --transform-translate-x: calc(var(--viewable) * -100%);
 }
 
@@ -661,9 +749,6 @@ img {
 
 .dot::before,
 .dot::after {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 500ms;
   background-color: #48bb78;
   width: 6rem;
   content: "";
@@ -689,48 +774,37 @@ img {
   width: 40%;
 }
 
-.tooltip {
-  position: absolute;
-  text-align: center;
-  padding: 2px;
-  font: 12px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
-}
+/**/
 
-.curved {
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
-}
+/** Project GIFs */
 
 .project-gif-gif {
   position: absolute;
   background-position: center;
   background-size: cover;
+  background-color: #000;
   width: 100%;
-  border-width: 1px;
-  border-width: 2px;
-  border-color: #48bb78;
-  border-radius: 0.25rem;
-  opacity: 0.1;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 9999px;
+  opacity: 0.25;
 }
 
-/* Select the element which has a class of `project-gif-gif` and also a class of `active`. */
+/** Select the element which has a class of `project-gif-gif` and also a class of `active`. */
 
 .project-gif-gif.active {
   opacity: 1;
 }
 
-.project-gif-title {
-}
-
 .project-gif-title.active {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .netflix-swap {
@@ -780,6 +854,23 @@ img {
 .tapjoy-swap.active {
   background-image: url("src/images/tapjoy_gif.gif");
 }
+
+/**/
+
+/** Netflix charts */
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  font: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/**/
 
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;

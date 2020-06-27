@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
       id="projects"
       className="flex items-center justify-center bg-indigo-500 h-64"
     >
-      <div className="grid grid-rows-4 h-120 rounded-lg shadow-lg bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-10">
+      <div className="grid grid-rows-4 h-120 rounded-lg shadow-2xl bg-gray-100 w-screen mx-5 sm:mx-12 md:mx-20 lg:mx-10">
         <div className="grid grid-cols-3 col-span-3 rounded-t-lg">
           <div className="grid col-span-1 justify-center items-center rounded-tl-lg">
             <div className="py-3 w-24 text-center border-b-2 border-green-500">

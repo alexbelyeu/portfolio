@@ -5,8 +5,8 @@ import { Link } from "gatsby"
 export const ProjectsNavItem = ({ children, to }) => {
   return (
     <Link
-      className="transition-all ease-out duration-500 inline-block py-1 px-4 mr-4 bg-transparent text-white text-sm sm:text-md font-semibold border border-white rounded hover:bg-indigo-300 hover:text-white hover:border-transparent"
-      activeClassName="transition-all ease-out duration-500 inline-block py-1 px-4 mr-4 bg-transparent bg-indigo-500 text-white text-sm sm:text-md font-semibold border-indigo-300 rounded cursor-default"
+      className="nav-button sm:text-md hover:bg-indigo-300 hover:border-none"
+      activeClassName="bg-indigo-300 border-none cursor-default"
       to={to}
     >
       {children}
@@ -17,8 +17,8 @@ export const ProjectsNavItem = ({ children, to }) => {
 export const ContactNavItem = ({ children, to, isContact }) => {
   return (
     <Link
-      className="transition-all ease-out duration-500 inline-block py-1 px-4 bg-transparent text-white text-sm sm:text-md font-semibold border border-white rounded bg-green-500 hover:bg-green-300 hover:text-white hover:border-transparent"
-      activeClassName="transition-all ease-out duration-500 inline-block py-1 px-4 bg-transparent bg-indigo-500 text-white text-sm sm:text-md font-semibold border-indigo-300 rounded cursor-default"
+      className="nav-button sm:text-md hover:bg-indigo-300 hover:border-none bg-green-300 ml-4"
+      activeClassName="bg-indigo-300 border-none cursor-default"
       to={to}
     >
       {children}

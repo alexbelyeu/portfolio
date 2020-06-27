@@ -32,7 +32,7 @@ const Testimonials = () => {
       className="bg-indigo-200 flex flex-col items-center justify-center"
     >
       <p className="my-5 text-center font-bold text-indigo-900 text-xl lg:text-2xl">
-        Testimonials
+        And people I've worked with have some nice things to say!
       </p>
       <div
         id="Carousel"
@@ -42,9 +42,9 @@ const Testimonials = () => {
         onMouseUp={e => swipe(x0, e.clientX)}
         className="flex max-w-xs md:max-w-lg overflow-hidden"
       >
-        {testimonials.map((testimonial, index) => (
+        {testimonials.map(testimonial => (
           <Card
-            className="slide"
+            className="slide transition-el"
             key={`${testimonial.person}Card`}
             id={`${testimonial.person}Card`}
             person={testimonial.person}
@@ -59,7 +59,7 @@ const Testimonials = () => {
           <div
             key={`${testimonial.person}Dot`}
             id={`${testimonial.person}Dot`}
-            className={`dot ${
+            className={`dot transition-el ${
               index === viewable && "font-bold text-indigo-900 fancy-underline"
             } ${index !== viewable && "cursor-pointer"}`}
             onClick={() => {

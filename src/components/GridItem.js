@@ -17,8 +17,7 @@ const GridItem = ({
       id={id}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`transition-all ease-out duration-500 transform
-        group h-full w-4/5 flex justify-center items-center
+      className={`transition-el duration-1000 group h-full w-4/5 flex justify-center items-center
         ${isInactive && inactiveClassName}
         ${isActive && activeClassName}`}
     >

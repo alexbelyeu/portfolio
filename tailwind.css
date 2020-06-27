@@ -13,10 +13,53 @@ img {
 
 @tailwind components;
 
+/** BUTTONS */
+.transition-el {
+  @apply transition-all ease-out duration-500 transform;
+}
+
+.nav-button {
+  @apply transition-el inline-block py-1 px-4 text-indigo-900 font-semibold border-2 border-indigo-800 rounded text-sm;
+}
+
+.nav-button:active {
+  @apply bg-indigo-300 border-none;
+}
+
+.footer-button {
+  @apply transition-el justify-center p-2 border border-white rounded-full;
+}
+
+.footer-button:active {
+  @apply bg-indigo-300 border-none;
+}
+/**/
+
+/** HeaderPortfolio */
+.curved {
+  position: relative;
+}
+.curved::after{
+  @apply shadow-2xl;
+  content: "";
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-image: url("src/images/madrid.jpg");
+  background-position: center;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  filter: blur(0.1rem);
+}
+/**/
+
+/** Testimonials */
 .slide {
   cursor: grab;
   pointer-events: none;
-  @apply transition-all ease-out duration-500 transform;
   --transform-translate-x: calc(var(--viewable) * -100%);
 }
 
@@ -25,7 +68,6 @@ img {
 }
 .dot::before,
 .dot::after {
-  @apply transition-all ease-out duration-500;
   @apply bg-green-500 w-24;
   content: "";
   position: absolute;
@@ -47,40 +89,21 @@ img {
   opacity: 1;
   width: 40%;
 }
+/**/
 
-.tooltip {
-  position: absolute;
-  text-align: center;
-  padding: 2px;
-  font: 12px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
-}
-
-.curved {
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
-}
-
+/** Project GIFs */
 .project-gif-gif {
-  @apply absolute bg-center bg-cover w-full border border-2 border-green-500 rounded;
-  opacity: 0.1;
+  @apply absolute bg-center bg-cover bg-black w-full shadow-xl rounded-full opacity-25;
 }
 
-/* Select the element which has a class of `project-gif-gif` and also a class of `active`. */
+/** Select the element which has a class of `project-gif-gif` and also a class of `active`. */
 .project-gif-gif.active {
   opacity: 1;
 }
 
-.project-gif-title {
-}
-
 .project-gif-title.active {
-  @apply px-1;
-  @apply rounded;
-  background-color: rgba(255, 255, 255, 0.8);
+  @apply px-1 h-full w-full flex justify-center items-center rounded-full;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .netflix-swap {
@@ -130,5 +153,19 @@ img {
 .tapjoy-swap.active {
   background-image: url("src/images/tapjoy_gif.gif");
 }
+/**/
+
+/** Netflix charts */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  font: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+/**/
 
 @tailwind utilities;

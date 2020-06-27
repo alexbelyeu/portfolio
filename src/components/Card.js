@@ -8,11 +8,11 @@ export const Card = ({ person, role, quote, image, className }) => {
       <div className="flex flex-col items-center">
         {image}
         <p className="pt-2 text-center font-bold text-indigo-900">{person}</p>
-        <p className="text-sm text-center">{role}</p>
+        <p className="text-sm text-center text-indigo-800">{role}</p>
       </div>
       <div className="pt-2 px-5 md:pt-0 md:pl-10">
         <FontAwesomeIcon icon={faQuoteLeft} className="text-green-300 absolute text-5xl" />
-        <p className="relative pt-4 md:pl-2 text-sm md:text-base">{quote}</p>
+        <p className="relative pt-4 md:pl-2 text-sm md:text-base text-indigo-900">{quote}</p>
       </div>
     </div>
   )
