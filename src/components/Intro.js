@@ -2,9 +2,7 @@ import React from "react"
 
 const Intro = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center text-lg text-indigo-900 mt-16 mb-48 mx-10 sm:mx-20 md:mx-32"
-    >
+    <div className="flex flex-col items-center justify-center text-lg text-indigo-900 mt-16 mb-48 mx-10 sm:mx-20 md:mx-32">
       <p>
         <span className="font-bold">Welcome! </span>I'm Alex Belyeu, a Software
         Engineer based in Cambridge (MA), and raised in Madrid, Spain 🇪🇸. Over

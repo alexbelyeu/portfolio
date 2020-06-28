@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 export const ProjectsNavItem = ({ children, to }) => {
   return (
     <Link
-      className="nav-button sm:text-md hover:bg-indigo-300 hover:border-none"
+      className="nav-button sm:text-md"
       activeClassName="bg-indigo-300 border-none cursor-default"
       to={to}
     >
@@ -17,7 +17,7 @@ export const ProjectsNavItem = ({ children, to }) => {
 export const ContactNavItem = ({ children, to, isContact }) => {
   return (
     <Link
-      className="nav-button sm:text-md hover:bg-indigo-300 hover:border-none bg-green-300 ml-4"
+      className="nav-button sm:text-md bg-green-300 ml-4"
       activeClassName="bg-indigo-300 border-none cursor-default"
       to={to}
     >

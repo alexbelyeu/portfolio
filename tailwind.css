@@ -19,11 +19,19 @@ img {
 }
 
 .nav-button {
-  @apply transition-el inline-block py-1 px-4 text-indigo-900 font-semibold border-2 border-indigo-800 rounded text-sm;
+  @apply transition-el py-1 px-4 text-indigo-900 font-semibold border border-indigo-800 rounded text-sm cursor-pointer;
 }
 
 .nav-button:active {
-  @apply bg-indigo-300 border-none;
+  @apply bg-indigo-200 border-none;
+}
+
+.nav-button:focus {
+  @apply outline-none;
+}
+
+.nav-button:hover {
+  @apply bg-indigo-200;
 }
 
 .footer-button {
@@ -31,7 +39,11 @@ img {
 }
 
 .footer-button:active {
-  @apply bg-indigo-300 border-none;
+  @apply bg-indigo-200 border-none;
+}
+
+.footer-button:hover {
+  @apply bg-indigo-200;
 }
 /**/
 
