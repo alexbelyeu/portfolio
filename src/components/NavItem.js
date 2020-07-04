@@ -2,6 +2,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
+import { animated, useTransition } from "react-spring"
 
 import Menu from "./Menu"
 
@@ -32,6 +33,18 @@ export const ProjectsNavItem = ({ children }) => {
     }
   }, [wrapperRef])
 
+  const transitions = useTransition(showMenu, null, {
+    from: {
+      display: "flex", // flex
+      justifyContent: "center", // justify-center
+      alignItems: "center", // items-center
+      width: "1.25rem", // w-5
+      opacity: 0,
+    },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  })
+
   return (
     <div ref={wrapperRef}>
       <button
@@ -39,15 +52,19 @@ export const ProjectsNavItem = ({ children }) => {
         onClick={() => setShowMenu(!showMenu)}
         className="nav-button px-2 flex justify-around items-center sm:text-md outline-none"
       >
-        <div className="w-5 h-5 flex justify-center items-center">
-          <FontAwesomeIcon
-            icon={showMenu ? faChevronUp : faChevronDown}
-            className="text-indigo-900 absolute text-sm"
-          />
+        <div>
+          {transitions.map(({ item, key, props }) => (
+            <animated.div key={key} style={props}>
+              <FontAwesomeIcon
+                icon={item ? faChevronUp : faChevronDown}
+                className="text-indigo-900 absolute text-sm"
+              />
+            </animated.div>
+          ))}
         </div>
         <span>{children}</span>
       </button>
-      {showMenu && <Menu />}
+      <Menu showMenu={showMenu} />
     </div>
   )
 }
