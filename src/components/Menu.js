@@ -1,74 +1,39 @@
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import { animated, useTrail } from "react-spring"
+import ExternalLinkIcon from "./ExternalLinkIcon"
 
 const items = [
-  <a
-    href="/projects"
-    className="px-2 h-full flex justify-center items-center bg-indigo-300 border border-indigo-900 shadow-lg rounded-full hover:bg-indigo-200"
-  >
+  <a href="/projects" className="project-buttons">
     Netflix Study
   </a>,
   <a
-    href=""
-    className="px-2 h-full flex justify-center items-center bg-indigo-300 border border-indigo-900 shadow-lg rounded-full hover:bg-indigo-200"
+    href="http://alexbelyeu.github.io/shooterCoaster/"
+    className="project-buttons"
   >
     Shooter Coaster 3D
-    <div className="w-6 flex justify-center items-center">
-      <FontAwesomeIcon
-        icon={faExternalLinkAlt}
-        className="text-indigo-900 absolute text-xs"
-      />
-    </div>
+    <ExternalLinkIcon />
   </a>,
-  <a
-    href=""
-    className="px-2 h-full flex justify-center items-center bg-indigo-300 border border-indigo-900 shadow-lg rounded-full hover:bg-indigo-200"
-  >
+  <a href="https://somryst.com/" className="project-buttons">
     Somryst
-    <div className="w-6 flex justify-center items-center">
-      <FontAwesomeIcon
-        icon={faExternalLinkAlt}
-        className="text-indigo-900 absolute text-xs"
-      />
-    </div>
+    <ExternalLinkIcon />
   </a>,
   <a
-    href=""
-    className="px-2 h-full flex justify-center items-center bg-indigo-300 border border-indigo-900 shadow-lg rounded-full hover:bg-indigo-200"
+    href="https://www.youtube.com/watch?v=vsWjMGmsr8E"
+    className="project-buttons"
   >
     Sweetspot
-    <div className="w-6 flex justify-center items-center">
-      <FontAwesomeIcon
-        icon={faExternalLinkAlt}
-        className="text-indigo-900 absolute text-xs"
-      />
-    </div>
+    <ExternalLinkIcon />
   </a>,
   <a
-    href=""
-    className="px-2 h-full flex justify-center items-center bg-indigo-300 border border-indigo-900 shadow-lg rounded-full hover:bg-indigo-200"
+    href="https://github.com/alexbelyeu/slack-jukebox"
+    className="project-buttons"
   >
     Slack Jukebox
-    <div className="w-6 flex justify-center items-center">
-      <FontAwesomeIcon
-        icon={faExternalLinkAlt}
-        className="text-indigo-900 absolute text-xs"
-      />
-    </div>
+    <ExternalLinkIcon />
   </a>,
-  <a
-    href=""
-    className="px-2 h-full flex justify-center items-center bg-indigo-300 border border-indigo-900 shadow-lg rounded-full hover:bg-indigo-200"
-  >
+  <a href="https://www.tapjoy.com/" className="project-buttons">
     Tapjoy
-    <div className="w-6 flex justify-center items-center">
-      <FontAwesomeIcon
-        icon={faExternalLinkAlt}
-        className="text-indigo-900 absolute text-xs"
-      />
-    </div>
+    <ExternalLinkIcon />
   </a>,
 ]
 

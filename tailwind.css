@@ -34,6 +34,16 @@ img {
   @apply bg-indigo-200;
 }
 
+.project-buttons {
+  @apply px-2 w-full h-full flex justify-center items-center border border-indigo-900 shadow-lg rounded-full;
+  background: rgb(163,191,240);
+  background: linear-gradient(90deg, rgba(163,191,240,1) 50%, rgba(195,218,254,1) 100%);
+}
+
+.project-buttons:hover {
+  @apply bg-indigo-200;
+}
+
 .footer-button {
   @apply transition-el justify-center p-2 border border-white rounded-full;
 }
