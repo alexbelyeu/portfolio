@@ -19,17 +19,16 @@ export const ProjectsNavItem = ({ children }) => {
 
   useEffect(() => {
     const handleClick = e => {
-      e.preventDefault()
       if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
         // Click outside of the menu
         setShowMenu(false)
       }
     }
 
-    window.addEventListener("click", handleClick)
+    document.addEventListener("click", handleClick)
 
     return () => {
-      window.removeEventListener("click", handleClick)
+      document.removeEventListener("click", handleClick)
     }
   }, [wrapperRef])
 

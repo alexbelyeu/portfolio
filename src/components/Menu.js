@@ -1,23 +1,33 @@
 import React from "react"
 import { animated, useTrail } from "react-spring"
 import ExternalLinkIcon from "./ExternalLinkIcon"
+import { Link } from "gatsby"
 
 const items = [
-  <a href="/projects" className="project-buttons">
+  <Link to="/projects" className="project-buttons">
     Netflix Study
-  </a>,
+  </Link>,
   <a
+    target="_blank"
+    rel="noopener noreferrer"
     href="http://alexbelyeu.github.io/shooterCoaster/"
     className="project-buttons"
   >
     Shooter Coaster 3D
     <ExternalLinkIcon />
   </a>,
-  <a href="https://somryst.com/" className="project-buttons">
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://somryst.com/"
+    className="project-buttons"
+  >
     Somryst
     <ExternalLinkIcon />
   </a>,
   <a
+    target="_blank"
+    rel="noopener noreferrer"
     href="https://www.youtube.com/watch?v=vsWjMGmsr8E"
     className="project-buttons"
   >
@@ -25,13 +35,20 @@ const items = [
     <ExternalLinkIcon />
   </a>,
   <a
+    target="_blank"
+    rel="noopener noreferrer"
     href="https://github.com/alexbelyeu/slack-jukebox"
     className="project-buttons"
   >
     Slack Jukebox
     <ExternalLinkIcon />
   </a>,
-  <a href="https://www.tapjoy.com/" className="project-buttons">
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.youtube.com/watch?v=yyFtcgLHsXY"
+    className="project-buttons"
+  >
     Tapjoy
     <ExternalLinkIcon />
   </a>,

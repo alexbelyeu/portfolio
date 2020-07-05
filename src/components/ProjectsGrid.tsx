@@ -22,7 +22,7 @@ const ProjectsGrid = () => {
         <div className="grid grid-cols-3 col-span-3 rounded-t-lg">
           <div className="grid col-span-1 justify-center items-center rounded-tl-lg">
             <div className="py-3 w-24 text-center border-b-2 border-green-500">
-              <p className="text-xl text-green-500 font-semibold">Skills</p>
+              <p className="text-xl text-green-500 font-semibold">Tools</p>
             </div>
           </div>
           <div className="grid col-span-2 justify-center items-center rounded-tr-lg">
