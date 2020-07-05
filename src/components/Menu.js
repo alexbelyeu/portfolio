@@ -4,7 +4,7 @@ import ExternalLinkIcon from "./ExternalLinkIcon"
 import { Link } from "gatsby"
 
 const items = [
-  <Link to="/projects" className="project-buttons">
+  <Link to="/netflix" className="project-buttons">
     Netflix Study
   </Link>,
   <a

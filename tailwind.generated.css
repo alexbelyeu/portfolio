@@ -607,6 +607,10 @@ img {
   margin-bottom: 0rem;
 }
 
+button:focus {
+  outline: 0;
+}
+
 .container {
   width: 100%;
 }
@@ -681,10 +685,6 @@ img {
   border-style: none;
 }
 
-.nav-button:focus {
-  outline: 0;
-}
-
 .nav-button:hover {
   background-color: #c3dafe;
 }
@@ -731,6 +731,7 @@ img {
 .footer-button:active {
   background-color: #c3dafe;
   border-style: none;
+  outline: 0;
 }
 
 .footer-button:hover {
