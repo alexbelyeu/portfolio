@@ -63,7 +63,7 @@ export const ProjectsNavItem = ({ children }) => {
         </div>
         <span>{children}</span>
       </button>
-      <Menu showMenu={showMenu} />
+      {showMenu && <Menu showMenu={showMenu} />}
     </div>
   )
 }

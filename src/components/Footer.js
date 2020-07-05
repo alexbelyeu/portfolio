@@ -3,29 +3,31 @@ import LinkedinSvg from "./svgs/LinkedinSvg"
 import MailSvg from "./svgs/MailSvg"
 
 const sendToContactPage = () => {
-  window.location = '/contact';
+  window.location = "/contact"
 }
 
 let toolTipTimeout
 const copyEmailToClipboard = () => {
   const emailTooltip = document.querySelector("#email-tooltip")
   navigator.clipboard
-    ? navigator.clipboard.writeText("abelyeun@gmail.com").then(
-        function () {
-          clearTimeout(toolTipTimeout)
-          emailTooltip.textContent = "I copied my email to your clipboard!"
-          emailTooltip.style.top = "-80px"
-          emailTooltip.style.width = "10rem"
-          emailTooltip.classList.add("opacity-100")
-          toolTipTimeout = setTimeout(() => {
-            emailTooltip.classList.remove("opacity-100")
-          }, 4000)
-        },
-        function () {
-          sendToContactPage()
-          console.log("err")
-        }
-      ).catch(sendToContactPage)
+    ? navigator.clipboard
+        .writeText("abelyeun@gmail.com")
+        .then(
+          function () {
+            clearTimeout(toolTipTimeout)
+            emailTooltip.textContent = "I copied my email to your clipboard!"
+            emailTooltip.style.top = "-80px"
+            emailTooltip.style.width = "10rem"
+            emailTooltip.classList.add("opacity-100")
+            toolTipTimeout = setTimeout(() => {
+              emailTooltip.classList.remove("opacity-100")
+            }, 4000)
+          },
+          function () {
+            sendToContactPage()
+          }
+        )
+        .catch(sendToContactPage)
     : sendToContactPage()
 }
 

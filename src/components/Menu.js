@@ -59,21 +59,20 @@ const Menu = ({ showMenu }) => {
   const trail = useTrail(items.length, {
     config,
     opacity: showMenu ? 1 : 0,
-    x: showMenu ? 0 : 20,
     height: showMenu ? 40 : 0,
-    from: { opacity: 0, x: 20, height: 0 },
+    from: { opacity: 0, x: 0, height: 0 },
   })
 
   return (
-    <div className="absolute mt-1 font-medium text-sm">
+    <div className="absolute w-40 sm:w-48 font-medium text-xs sm:text-sm">
       {trail.map(({ x, height, ...rest }, index) => (
         <animated.div
           key={index}
-          className="my-1 w-48"
+          className="my-1"
           style={{
             ...rest,
             transform: x.interpolate(
-              x => `translate3d(${index % 2 ? 20 : 0}px,${x}px,0)`
+              x => `translate3d(${index % 2 ? -20 : 0}px,0px,0)`
             ),
           }}
         >
